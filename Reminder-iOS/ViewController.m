@@ -34,6 +34,9 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
 #pragma mark - Setup
 - (void)setup
 {
+    self.navigationController.navigationBar.barTintColor = [UIColor darkGrayColor];
+    //self.navigationController.navigationBar.translucent = NO;
+    
     self.collectionViewLayout = [[RAMCollectionViewFlemishBondLayout alloc] init];
     self.collectionViewLayout.delegate = self;
     self.collectionViewLayout.numberOfElements = 3;
@@ -43,7 +46,7 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.collectionViewLayout];
     collectionView.delegate = self;
     collectionView.dataSource = self;
-    collectionView.backgroundColor = [UIColor yellowColor];
+    collectionView.backgroundColor = [UIColor blackColor];
     [collectionView registerClass:[RAMCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifier];
     [collectionView registerClass:[RAMCollectionAuxView class] forSupplementaryViewOfKind:RAMCollectionViewFlemishBondHeaderKind withReuseIdentifier:HeaderIdentifier];
     [collectionView registerClass:[RAMCollectionAuxView class] forSupplementaryViewOfKind:RAMCollectionViewFlemishBondFooterKind withReuseIdentifier:FooterIdentifier];
@@ -58,19 +61,19 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
 - (IBAction)btnAction:(id)sender {
     NSMutableArray *items = [[NSMutableArray alloc] initWithCapacity:3];
     
-    MenuItem *menuItem = [[MenuItem alloc] initWithTitle:@"Calendar" iconName:@"post_type_bubble_flickr" glowColor:[UIColor grayColor] index:0];
+    MenuItem *menuItem = [[MenuItem alloc] initWithTitle:@"New Task" iconName:@"post_type_bubble_flickr" glowColor:[UIColor grayColor] index:0];
     
     [items addObject:menuItem];
     
     
     
-    menuItem = [[MenuItem alloc] initWithTitle:@"Googleplus" iconName:@"post_type_bubble_googleplus" glowColor:[UIColor colorWithRed:0.000 green:0.840 blue:0.000 alpha:1.000] index:0];
+    menuItem = [[MenuItem alloc] initWithTitle:@"Time Manager" iconName:@"post_type_bubble_googleplus" glowColor:[UIColor colorWithRed:0.000 green:0.840 blue:0.000 alpha:1.000] index:0];
     
     [items addObject:menuItem];
     
     
     
-    menuItem = [[MenuItem alloc] initWithTitle:@"Instagram" iconName:@"post_type_bubble_instagram" glowColor:[UIColor colorWithRed:0.687 green:0.000 blue:0.000 alpha:1.000] index:0];
+    menuItem = [[MenuItem alloc] initWithTitle:@"Stop Watch" iconName:@"post_type_bubble_instagram" glowColor:[UIColor colorWithRed:0.687 green:0.000 blue:0.000 alpha:1.000] index:0];
     
     [items addObject:menuItem];
     
@@ -126,9 +129,21 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    RAMCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    RAMCollectionViewCell *cell;
+    if(cell == nil){
+        cell = (RAMCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+        CGRect frameRect = cell.frame;
+        frameRect.size.width -= 7;
+        frameRect.size.height -= 7;
+        cell.frame = frameRect;
+    }
+    
+    
     
     [cell configureCellWithIndexPath:indexPath];
+    
+    
+    
     
     return cell;
 }
