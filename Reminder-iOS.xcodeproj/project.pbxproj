@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		392CB23F1B270BDD00D55AA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB23E1B270BDD00D55AA1 /* main.m */; };
+		392CB2421B270BDD00D55AA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2411B270BDD00D55AA1 /* AppDelegate.m */; };
+		392CB2451B270BDD00D55AA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2441B270BDD00D55AA1 /* ViewController.m */; };
+		392CB2481B270BDD00D55AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392CB2461B270BDD00D55AA1 /* Main.storyboard */; };
+		392CB24A1B270BDD00D55AA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 392CB2491B270BDD00D55AA1 /* Images.xcassets */; };
+		392CB24D1B270BDD00D55AA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 392CB24B1B270BDD00D55AA1 /* LaunchScreen.xib */; };
+		392CB2591B270BDD00D55AA1 /* Reminder_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2581B270BDD00D55AA1 /* Reminder_iOSTests.m */; };
+		392CB2641B2713A000D55AA1 /* RAMCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2631B2713A000D55AA1 /* RAMCollectionViewCell.m */; };
+		392CB2671B2713C300D55AA1 /* RAMCollectionAuxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2661B2713C300D55AA1 /* RAMCollectionAuxView.m */; };
+		392CB26A1B27143000D55AA1 /* UIColor+additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2691B27143000D55AA1 /* UIColor+additions.m */; };
+		6CC9CF816DCE8E1F46F25CA0 /* libPods-Reminder-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D57D4A46C566A768531EAD /* libPods-Reminder-iOS.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		392CB2531B270BDD00D55AA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 392CB2311B270BDD00D55AA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 392CB2381B270BDD00D55AA1;
+			remoteInfo = "Reminder-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05826CBE2B0F02849A824443 /* Pods-Reminder-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminder-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reminder-iOS/Pods-Reminder-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		392CB2391B270BDD00D55AA1 /* Reminder-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reminder-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		392CB23D1B270BDD00D55AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		392CB23E1B270BDD00D55AA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		392CB2401B270BDD00D55AA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		392CB2411B270BDD00D55AA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		392CB2431B270BDD00D55AA1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		392CB2441B270BDD00D55AA1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		392CB2471B270BDD00D55AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		392CB2491B270BDD00D55AA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		392CB24C1B270BDD00D55AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		392CB2521B270BDD00D55AA1 /* Reminder-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reminder-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		392CB2571B270BDD00D55AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		392CB2581B270BDD00D55AA1 /* Reminder_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reminder_iOSTests.m; sourceTree = "<group>"; };
+		392CB2621B2713A000D55AA1 /* RAMCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAMCollectionViewCell.h; sourceTree = "<group>"; };
+		392CB2631B2713A000D55AA1 /* RAMCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAMCollectionViewCell.m; sourceTree = "<group>"; };
+		392CB2651B2713C300D55AA1 /* RAMCollectionAuxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAMCollectionAuxView.h; sourceTree = "<group>"; };
+		392CB2661B2713C300D55AA1 /* RAMCollectionAuxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAMCollectionAuxView.m; sourceTree = "<group>"; };
+		392CB2681B27142500D55AA1 /* UIColor+additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+additions.h"; sourceTree = "<group>"; };
+		392CB2691B27143000D55AA1 /* UIColor+additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+additions.m"; sourceTree = "<group>"; };
+		44D57D4A46C566A768531EAD /* libPods-Reminder-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Reminder-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD9BD186F11FCAF695470FA7 /* Pods-Reminder-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminder-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reminder-iOS/Pods-Reminder-iOS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		392CB2361B270BDD00D55AA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC9CF816DCE8E1F46F25CA0 /* libPods-Reminder-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		392CB24F1B270BDD00D55AA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		392CB2301B270BDD00D55AA1 = {
+			isa = PBXGroup;
+			children = (
+				392CB23B1B270BDD00D55AA1 /* Reminder-iOS */,
+				392CB2551B270BDD00D55AA1 /* Reminder-iOSTests */,
+				392CB23A1B270BDD00D55AA1 /* Products */,
+				598064654A91434C5766F6CA /* Pods */,
+				DD21A2E5287EEEA5AF75F4F4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		392CB23A1B270BDD00D55AA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				392CB2391B270BDD00D55AA1 /* Reminder-iOS.app */,
+				392CB2521B270BDD00D55AA1 /* Reminder-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		392CB23B1B270BDD00D55AA1 /* Reminder-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				392CB2681B27142500D55AA1 /* UIColor+additions.h */,
+				392CB2691B27143000D55AA1 /* UIColor+additions.m */,
+				392CB2621B2713A000D55AA1 /* RAMCollectionViewCell.h */,
+				392CB2631B2713A000D55AA1 /* RAMCollectionViewCell.m */,
+				392CB2651B2713C300D55AA1 /* RAMCollectionAuxView.h */,
+				392CB2661B2713C300D55AA1 /* RAMCollectionAuxView.m */,
+				392CB2401B270BDD00D55AA1 /* AppDelegate.h */,
+				392CB2411B270BDD00D55AA1 /* AppDelegate.m */,
+				392CB2431B270BDD00D55AA1 /* ViewController.h */,
+				392CB2441B270BDD00D55AA1 /* ViewController.m */,
+				392CB2461B270BDD00D55AA1 /* Main.storyboard */,
+				392CB2491B270BDD00D55AA1 /* Images.xcassets */,
+				392CB24B1B270BDD00D55AA1 /* LaunchScreen.xib */,
+				392CB23C1B270BDD00D55AA1 /* Supporting Files */,
+			);
+			path = "Reminder-iOS";
+			sourceTree = "<group>";
+		};
+		392CB23C1B270BDD00D55AA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				392CB23D1B270BDD00D55AA1 /* Info.plist */,
+				392CB23E1B270BDD00D55AA1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		392CB2551B270BDD00D55AA1 /* Reminder-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				392CB2581B270BDD00D55AA1 /* Reminder_iOSTests.m */,
+				392CB2561B270BDD00D55AA1 /* Supporting Files */,
+			);
+			path = "Reminder-iOSTests";
+			sourceTree = "<group>";
+		};
+		392CB2561B270BDD00D55AA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				392CB2571B270BDD00D55AA1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		598064654A91434C5766F6CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05826CBE2B0F02849A824443 /* Pods-Reminder-iOS.debug.xcconfig */,
+				BD9BD186F11FCAF695470FA7 /* Pods-Reminder-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD21A2E5287EEEA5AF75F4F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D57D4A46C566A768531EAD /* libPods-Reminder-iOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		392CB2381B270BDD00D55AA1 /* Reminder-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 392CB25C1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "Reminder-iOS" */;
+			buildPhases = (
+				E06BF12DDB867A19FAE35B02 /* Check Pods Manifest.lock */,
+				392CB2351B270BDD00D55AA1 /* Sources */,
+				392CB2361B270BDD00D55AA1 /* Frameworks */,
+				392CB2371B270BDD00D55AA1 /* Resources */,
+				C58C457B160213E66AE847D1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reminder-iOS";
+			productName = "Reminder-iOS";
+			productReference = 392CB2391B270BDD00D55AA1 /* Reminder-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		392CB2511B270BDD00D55AA1 /* Reminder-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 392CB25F1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "Reminder-iOSTests" */;
+			buildPhases = (
+				392CB24E1B270BDD00D55AA1 /* Sources */,
+				392CB24F1B270BDD00D55AA1 /* Frameworks */,
+				392CB2501B270BDD00D55AA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				392CB2541B270BDD00D55AA1 /* PBXTargetDependency */,
+			);
+			name = "Reminder-iOSTests";
+			productName = "Reminder-iOSTests";
+			productReference = 392CB2521B270BDD00D55AA1 /* Reminder-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		392CB2311B270BDD00D55AA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = saqib;
+				TargetAttributes = {
+					392CB2381B270BDD00D55AA1 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					392CB2511B270BDD00D55AA1 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 392CB2381B270BDD00D55AA1;
+					};
+				};
+			};
+			buildConfigurationList = 392CB2341B270BDD00D55AA1 /* Build configuration list for PBXProject "Reminder-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 392CB2301B270BDD00D55AA1;
+			productRefGroup = 392CB23A1B270BDD00D55AA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				392CB2381B270BDD00D55AA1 /* Reminder-iOS */,
+				392CB2511B270BDD00D55AA1 /* Reminder-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		392CB2371B270BDD00D55AA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				392CB2481B270BDD00D55AA1 /* Main.storyboard in Resources */,
+				392CB24D1B270BDD00D55AA1 /* LaunchScreen.xib in Resources */,
+				392CB24A1B270BDD00D55AA1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		392CB2501B270BDD00D55AA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C58C457B160213E66AE847D1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Reminder-iOS/Pods-Reminder-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E06BF12DDB867A19FAE35B02 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		392CB2351B270BDD00D55AA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				392CB2451B270BDD00D55AA1 /* ViewController.m in Sources */,
+				392CB2641B2713A000D55AA1 /* RAMCollectionViewCell.m in Sources */,
+				392CB2421B270BDD00D55AA1 /* AppDelegate.m in Sources */,
+				392CB2671B2713C300D55AA1 /* RAMCollectionAuxView.m in Sources */,
+				392CB23F1B270BDD00D55AA1 /* main.m in Sources */,
+				392CB26A1B27143000D55AA1 /* UIColor+additions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		392CB24E1B270BDD00D55AA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				392CB2591B270BDD00D55AA1 /* Reminder_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		392CB2541B270BDD00D55AA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 392CB2381B270BDD00D55AA1 /* Reminder-iOS */;
+			targetProxy = 392CB2531B270BDD00D55AA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		392CB2461B270BDD00D55AA1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				392CB2471B270BDD00D55AA1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		392CB24B1B270BDD00D55AA1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				392CB24C1B270BDD00D55AA1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		392CB25A1B270BDD00D55AA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		392CB25B1B270BDD00D55AA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		392CB25D1B270BDD00D55AA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05826CBE2B0F02849A824443 /* Pods-Reminder-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Reminder-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		392CB25E1B270BDD00D55AA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD9BD186F11FCAF695470FA7 /* Pods-Reminder-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Reminder-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		392CB2601B270BDD00D55AA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Reminder-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reminder-iOS.app/Reminder-iOS";
+			};
+			name = Debug;
+		};
+		392CB2611B270BDD00D55AA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Reminder-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reminder-iOS.app/Reminder-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		392CB2341B270BDD00D55AA1 /* Build configuration list for PBXProject "Reminder-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				392CB25A1B270BDD00D55AA1 /* Debug */,
+				392CB25B1B270BDD00D55AA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		392CB25C1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "Reminder-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				392CB25D1B270BDD00D55AA1 /* Debug */,
+				392CB25E1B270BDD00D55AA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		392CB25F1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "Reminder-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				392CB2601B270BDD00D55AA1 /* Debug */,
+				392CB2611B270BDD00D55AA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 392CB2311B270BDD00D55AA1 /* Project object */;
+}

@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Reminder_iOS_RAMCollectionViewFlemishBondLayout : NSObject
+@end
+@implementation PodsDummy_Pods_Reminder_iOS_RAMCollectionViewFlemishBondLayout
+@end
