@@ -17,6 +17,7 @@
 		392CB2641B2713A000D55AA1 /* RAMCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2631B2713A000D55AA1 /* RAMCollectionViewCell.m */; };
 		392CB2671B2713C300D55AA1 /* RAMCollectionAuxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2661B2713C300D55AA1 /* RAMCollectionAuxView.m */; };
 		392CB26A1B27143000D55AA1 /* UIColor+additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2691B27143000D55AA1 /* UIColor+additions.m */; };
+		46F32AC31B2B90DA0097F3B8 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */; };
 		6CC9CF816DCE8E1F46F25CA0 /* libPods-Reminder-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D57D4A46C566A768531EAD /* libPods-Reminder-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 		392CB2681B27142500D55AA1 /* UIColor+additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+additions.h"; sourceTree = "<group>"; };
 		392CB2691B27143000D55AA1 /* UIColor+additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+additions.m"; sourceTree = "<group>"; };
 		44D57D4A46C566A768531EAD /* libPods-Reminder-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Reminder-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46F32AC11B2B90DA0097F3B8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		BD9BD186F11FCAF695470FA7 /* Pods-Reminder-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminder-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reminder-iOS/Pods-Reminder-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +114,8 @@
 				392CB2491B270BDD00D55AA1 /* Images.xcassets */,
 				392CB24B1B270BDD00D55AA1 /* LaunchScreen.xib */,
 				392CB23C1B270BDD00D55AA1 /* Supporting Files */,
+				46F32AC11B2B90DA0097F3B8 /* CalendarViewController.h */,
+				46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */,
 			);
 			path = "Reminder-iOS";
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				TargetAttributes = {
 					392CB2381B270BDD00D55AA1 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 4R2Y98P579;
 					};
 					392CB2511B270BDD00D55AA1 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -299,6 +305,7 @@
 				392CB2671B2713C300D55AA1 /* RAMCollectionAuxView.m in Sources */,
 				392CB23F1B270BDD00D55AA1 /* main.m in Sources */,
 				392CB26A1B27143000D55AA1 /* UIColor+additions.m in Sources */,
+				46F32AC31B2B90DA0097F3B8 /* CalendarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +434,8 @@
 			baseConfigurationReference = 05826CBE2B0F02849A824443 /* Pods-Reminder-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Reminder-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -439,6 +448,7 @@
 			baseConfigurationReference = BD9BD186F11FCAF695470FA7 /* Pods-Reminder-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Reminder-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

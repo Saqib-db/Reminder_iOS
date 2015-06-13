@@ -18,6 +18,7 @@ static NSString *const CellIdentifier = @"MyCell";
 static NSString * const HeaderIdentifier = @"HeaderIdentifier";
 static NSString * const FooterIdentifier = @"FooterIdentifier";
 
+
 @interface ViewController ()
 
 @end
@@ -58,63 +59,62 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)btnAction:(id)sender {
+- (void)showMenu {
     NSMutableArray *items = [[NSMutableArray alloc] initWithCapacity:3];
     
-    MenuItem *menuItem = [[MenuItem alloc] initWithTitle:@"New Task" iconName:@"post_type_bubble_flickr" glowColor:[UIColor grayColor] index:0];
-    
+    MenuItem *menuItem = [MenuItem itemWithTitle:@"New Event" iconName:@"post_type_bubble_flickr"];
+    menuItem.index = 0;
     [items addObject:menuItem];
     
-    
-    
-    menuItem = [[MenuItem alloc] initWithTitle:@"Time Manager" iconName:@"post_type_bubble_googleplus" glowColor:[UIColor colorWithRed:0.000 green:0.840 blue:0.000 alpha:1.000] index:0];
-    
+    menuItem = [MenuItem itemWithTitle:@"Time Manager" iconName:@"post_type_bubble_googleplus" glowColor:[UIColor colorWithRed:0.840 green:0.264 blue:0.208 alpha:0.800]];
+    menuItem.index = 1;
     [items addObject:menuItem];
     
-    
-    
-    menuItem = [[MenuItem alloc] initWithTitle:@"Stop Watch" iconName:@"post_type_bubble_instagram" glowColor:[UIColor colorWithRed:0.687 green:0.000 blue:0.000 alpha:1.000] index:0];
-    
+    menuItem = [MenuItem itemWithTitle:@"Stop Watch" iconName:@"post_type_bubble_instagram" glowColor:[UIColor colorWithRed:0.232 green:0.442 blue:0.687 alpha:0.800]];
+    menuItem.index = 2;
     [items addObject:menuItem];
     
-    
-    
-    menuItem = [[MenuItem alloc] initWithTitle:@"Twitter" iconName:@"post_type_bubble_twitter" glowColor:[UIColor colorWithRed:0.687 green:0.000 blue:0.000 alpha:1.000] index:0];
-    
+    menuItem = [MenuItem itemWithTitle:@"Contacts" iconName:@"post_type_bubble_twitter" glowColor:[UIColor colorWithRed:0.000 green:0.509 blue:0.687 alpha:0.800]];
+    menuItem.index = 3;
     [items addObject:menuItem];
     
-    
-    
-    menuItem = [[MenuItem alloc] initWithTitle:@"Youtube" iconName:@"post_type_bubble_youtube" glowColor:[UIColor colorWithRed:0.687 green:0.000 blue:0.000 alpha:1.000] index:0];
-    
+    menuItem = [MenuItem itemWithTitle:@"Calendar" iconName:@"post_type_bubble_youtube" glowColor:[UIColor colorWithRed:0.687 green:0.164 blue:0.246 alpha:0.800]];
+    menuItem.index = 4;
     [items addObject:menuItem];
     
-    
-    
-    menuItem = [[MenuItem alloc] initWithTitle:@"Facebook" iconName:@"post_type_bubble_facebook" glowColor:[UIColor colorWithRed:0.687 green:0.000 blue:0.000 alpha:1.000] index:0];
-    
+    menuItem = [MenuItem itemWithTitle:@"Important Evetns" iconName:@"post_type_bubble_facebook" glowColor:[UIColor colorWithRed:0.258 green:0.245 blue:0.687 alpha:0.800]];
+    menuItem.index = 5;
     [items addObject:menuItem];
     
-    
-    
-    PopMenu *popMenu = [[PopMenu alloc] initWithFrame:self.view.bounds items:items];
-    
-    [popMenu showMenuAtView:self.view];
-    
-    
-    if (!popMenu) {
-        popMenu = [[PopMenu alloc] initWithFrame:self.view.bounds items:items];
-        popMenu.menuAnimationType = kPopMenuAnimationTypeNetEase;
+    if (!_popMenu) {
+        _popMenu = [[PopMenu alloc] initWithFrame:self.view.bounds items:items];
+        _popMenu.menuAnimationType = kPopMenuAnimationTypeNetEase;
     }
-    if (popMenu.isShowed) {
+    if (_popMenu.isShowed) {
+        [_popMenu dismissMenu];
         return;
     }
-    popMenu.didSelectedItemCompletion = ^(MenuItem *selectedItem) {
-        NSLog(@" selected index is:%d",(int)selectedItem.index);
+    _popMenu.didSelectedItemCompletion = ^(MenuItem *selectedItem) {
+        NSLog(@"%li",(long)selectedItem.index);
+        if (selectedItem.index == 4) {
+            [self performSegueWithIdentifier:@"HomeToCalendar" sender:self];
+        }
     };
+    
+    [_popMenu showMenuAtView:self.view];
+    
+    //    [_popMenu showMenuAtView:self.view startPoint:CGPointMake(CGRectGetWidth(self.view.bounds) - 60, CGRectGetHeight(self.view.bounds)) endPoint:CGPointMake(60, CGRectGetHeight(self.view.bounds))];
+}
+
+
+- (IBAction)btnAction:(id)sender {
+    [self showMenu];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [self btnAction:self];
+}
+- (void)gotoCalendar:(id)sender {
+    
 }
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
