@@ -24,6 +24,12 @@
 #define COCOAPODS_VERSION_MINOR_RAMCollectionViewFlemishBondLayout 1
 #define COCOAPODS_VERSION_PATCH_RAMCollectionViewFlemishBondLayout 1
 
+// SKSplashView
+#define COCOAPODS_POD_AVAILABLE_SKSplashView
+#define COCOAPODS_VERSION_MAJOR_SKSplashView 0
+#define COCOAPODS_VERSION_MINOR_SKSplashView 1
+#define COCOAPODS_VERSION_PATCH_SKSplashView 0
+
 // XHRealTimeBlur
 #define COCOAPODS_POD_AVAILABLE_XHRealTimeBlur
 #define COCOAPODS_VERSION_MAJOR_XHRealTimeBlur 1

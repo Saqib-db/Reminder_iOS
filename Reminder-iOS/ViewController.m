@@ -14,12 +14,16 @@
 #import "RAMCollectionViewFlemishBondLayout.h"
 #import "RAMCollectionViewCell.h"
 #import "RAMCollectionAuxView.h"
+#import "SKSplashIcon.h"
+
 static NSString *const CellIdentifier = @"MyCell";
 static NSString * const HeaderIdentifier = @"HeaderIdentifier";
 static NSString * const FooterIdentifier = @"FooterIdentifier";
 
 
-@interface ViewController ()
+@interface ViewController (){
+    int count;
+}
 
 @end
 
@@ -27,24 +31,39 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self setup];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if([defaults objectForKey:@"start_from_scratch"] != nil){
+        [self setup];
+    }
+    else {
+        [defaults setObject:@"ON" forKey:@"start_from_scratch"];
+        [self twitterSplash];
+    }
+    [defaults synchronize];
+
+    //[self setup];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
 #pragma mark - Setup
 - (void)setup
 {
+    self.navigationController.navigationBarHidden = YES;
+
     self.navigationController.navigationBar.barTintColor = [UIColor darkGrayColor];
     //self.navigationController.navigationBar.translucent = NO;
     
     self.collectionViewLayout = [[RAMCollectionViewFlemishBondLayout alloc] init];
     self.collectionViewLayout.delegate = self;
     self.collectionViewLayout.numberOfElements = 3;
-    self.collectionViewLayout.highlightedCellHeight = 150.f;
-    self.collectionViewLayout.highlightedCellWidth = 200.f;
+    self.collectionViewLayout.highlightedCellHeight = (self.view.frame.size.width-(self.view.frame.size.width/2));//200.f;
+    self.collectionViewLayout.highlightedCellWidth = (self.view.frame.size.width-(self.view.frame.size.width/2.7));//   200.f;
     
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.collectionViewLayout];
+    
+    //self.mainCollectionView.collectionViewLayout = self.collectionViewLayout;
+    
+    //UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 400, 400) collectionViewLayout:self.collectionViewLayout];
     collectionView.delegate = self;
     collectionView.dataSource = self;
     collectionView.backgroundColor = [UIColor blackColor];
@@ -52,12 +71,22 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     [collectionView registerClass:[RAMCollectionAuxView class] forSupplementaryViewOfKind:RAMCollectionViewFlemishBondHeaderKind withReuseIdentifier:HeaderIdentifier];
     [collectionView registerClass:[RAMCollectionAuxView class] forSupplementaryViewOfKind:RAMCollectionViewFlemishBondFooterKind withReuseIdentifier:FooterIdentifier];
     
+    
+    //[collectionView addSubview:self.bottomView];
+    
+
+    collectionView.backgroundColor = [UIColor blackColor];
     self.view = collectionView;
+
+    [self.view bringSubviewToFront:self.bottomView];
+    
+    self.tabBarController.delegate = self;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (void)showMenu {
     NSMutableArray *items = [[NSMutableArray alloc] initWithCapacity:3];
@@ -136,13 +165,21 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
         frameRect.size.width -= 7;
         frameRect.size.height -= 7;
         cell.frame = frameRect;
+        
+        
     }
     
     
     
     [cell configureCellWithIndexPath:indexPath];
     
-    
+    /*if (indexPath.row == 0 && count != 1) {
+        [self blinkTime:cell];
+        cell.backgroundColor = [UIColor orangeColor];
+    }
+    else{
+        NSLog(@"row is : %i",(int)indexPath.row);
+    }*/
     
     
     return cell;
@@ -186,4 +223,77 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     
     return direction;
 }
+
+- (void) twitterSplash
+{
+    //Setting the background
+    /*UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    imageView.image = [UIImage imageNamed:@"twitter background.png"];
+    [self.view addSubview:imageView];*/
+    //Twitter style splash
+    self.navigationController.navigationBarHidden = YES;
+    SKSplashIcon *twitterSplashIcon = [[SKSplashIcon alloc] initWithImage:[UIImage imageNamed:@"twitter_icon.png"] animationType:SKIconAnimationTypeBounce];
+    UIColor *twitterColor = [UIColor colorWithRed:0.25098 green:0.6 blue:1.0 alpha:1.0];
+    _splashView = [[SKSplashView alloc] initWithSplashIcon:twitterSplashIcon backgroundColor:twitterColor animationType:SKSplashAnimationTypeNone];
+    _splashView.delegate = self; //Optional -> if you want to receive updates on animation beginning/end
+    _splashView.animationDuration = 1; //Optional -> set animation duration. Default: 1s
+    [self.view addSubview:_splashView];
+    [_splashView startAnimation];
+}
+#pragma mark - Delegate methods
+
+- (void) splashView:(SKSplashView *)splashView didBeginAnimatingWithDuration:(float)duration
+{
+    NSLog(@"Started animating from delegate");
+    //To start activity animation when splash animation starts
+    //[_indicatorView startAnimating];
+}
+
+- (void) splashViewDidEndAnimating:(SKSplashView *)splashView
+{
+    NSLog(@"Stopped animating from delegate");
+    //To stop activity animation when splash animation ends
+    //[_indicatorView stopAnimating];
+    [self setup];
+}
+-(void)flashView:(UIView *)view {
+    NSLog(@"called");
+    count = 1;
+    self.flashView = [[UIView alloc] initWithFrame:view.frame];
+    self.flashView.backgroundColor = [UIColor whiteColor];
+    [view addSubview:self.flashView];
+    [self.flashView setAlpha:0];
+    
+    
+    [UIView animateWithDuration:0.3
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         [self.flashView setAlpha:0.7];
+                     }
+                     completion:^(BOOL finished){
+                         [self.flashView setAlpha:0];
+                         [UIView animateWithDuration:0.3
+                                               delay:0.2
+                                             options: UIViewAnimationOptionCurveEaseOut
+                                          animations:^{
+                                              [self.flashView setAlpha:0.7];
+                                          }
+                                          completion:^(BOOL finished){
+                                              [self.flashView setAlpha:0];
+                                          }];
+                     }];
+}
+-(void)blinkTime:(UIView *)view{
+    if (count != 1) {
+        [self performSelector:@selector(flashView:) withObject:view afterDelay:5.0f];
+    }
+}
+- (void)tabBarController:(UITabBarController *)tabBarController
+ didSelectViewController:(UIViewController *)viewController
+{
+    [self showMenu];
+
+}
+
 @end

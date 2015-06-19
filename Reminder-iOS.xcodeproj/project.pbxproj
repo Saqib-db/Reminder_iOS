@@ -18,6 +18,8 @@
 		392CB2671B2713C300D55AA1 /* RAMCollectionAuxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2661B2713C300D55AA1 /* RAMCollectionAuxView.m */; };
 		392CB26A1B27143000D55AA1 /* UIColor+additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2691B27143000D55AA1 /* UIColor+additions.m */; };
 		46F32AC31B2B90DA0097F3B8 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */; };
+		46F4C46C1B2CDE2D00EAE205 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F4C46A1B2CDE2D00EAE205 /* Fabric.framework */; };
+		46F4C46D1B2CDE2D00EAE205 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F4C46B1B2CDE2D00EAE205 /* Crashlytics.framework */; };
 		6CC9CF816DCE8E1F46F25CA0 /* libPods-Reminder-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D57D4A46C566A768531EAD /* libPods-Reminder-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		44D57D4A46C566A768531EAD /* libPods-Reminder-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Reminder-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F32AC11B2B90DA0097F3B8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		46F4C46A1B2CDE2D00EAE205 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		46F4C46B1B2CDE2D00EAE205 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		BD9BD186F11FCAF695470FA7 /* Pods-Reminder-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminder-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reminder-iOS/Pods-Reminder-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +68,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CC9CF816DCE8E1F46F25CA0 /* libPods-Reminder-iOS.a in Frameworks */,
+				46F4C46D1B2CDE2D00EAE205 /* Crashlytics.framework in Frameworks */,
+				46F4C46C1B2CDE2D00EAE205 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +86,8 @@
 		392CB2301B270BDD00D55AA1 = {
 			isa = PBXGroup;
 			children = (
+				46F4C46A1B2CDE2D00EAE205 /* Fabric.framework */,
+				46F4C46B1B2CDE2D00EAE205 /* Crashlytics.framework */,
 				392CB23B1B270BDD00D55AA1 /* Reminder-iOS */,
 				392CB2551B270BDD00D55AA1 /* Reminder-iOSTests */,
 				392CB23A1B270BDD00D55AA1 /* Products */,
@@ -175,6 +183,7 @@
 				392CB2361B270BDD00D55AA1 /* Frameworks */,
 				392CB2371B270BDD00D55AA1 /* Resources */,
 				C58C457B160213E66AE847D1 /* Copy Pods Resources */,
+				46F4C4691B2CDDC600EAE205 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -262,6 +271,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		46F4C4691B2CDDC600EAE205 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 301fa28d7897683cff1d56051999c42cc902b744 b70d28c693a086888020cb1897d43e59c3dd77964516359549d572c4b251e8ec";
+		};
 		C58C457B160213E66AE847D1 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -436,10 +458,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Reminder-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3218f5cf-c0a2-4347-8876-ac1f773225aa";
 			};
 			name = Debug;
 		};
@@ -448,11 +475,16 @@
 			baseConfigurationReference = BD9BD186F11FCAF695470FA7 /* Pods-Reminder-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Reminder-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3218f5cf-c0a2-4347-8876-ac1f773225aa";
 			};
 			name = Release;
 		};
