@@ -1,4 +1,5 @@
 PODS:
+  - IQKeyboardManager (3.2.4)
   - JTCalendar (1.2.3)
   - pop (1.0.7)
   - PopMenu (2.4):
@@ -6,20 +7,27 @@ PODS:
     - XHRealTimeBlur
   - RAMCollectionViewFlemishBondLayout (1.1.1)
   - SKSplashView (0.1.0)
+  - sqlite3 (3.8.10.2):
+    - sqlite3/common (= 3.8.10.2)
+  - sqlite3/common (3.8.10.2)
   - XHRealTimeBlur (1.7)
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - JTCalendar (~> 1.1)
   - PopMenu
   - RAMCollectionViewFlemishBondLayout (~> 1.1.1)
   - SKSplashView
+  - sqlite3
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
   JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   PopMenu: 26b97baeaf250070f4f61b93727ca86d127d7bc5
   RAMCollectionViewFlemishBondLayout: 82beaeafc7c1e51f417c1273ea136480970a8be2
   SKSplashView: 8cdb1bfccb5857cb141751d01b03cf132b110168
+  sqlite3: 5e6797834b321b0926250b89315b8516ce1c58f6
   XHRealTimeBlur: 661fadd5691ba2d349758e8fd5fbdb499ac55f8c
 
 COCOAPODS: 0.35.0

@@ -15,6 +15,9 @@
 #import "RAMCollectionViewCell.h"
 #import "RAMCollectionAuxView.h"
 #import "SKSplashIcon.h"
+#import "Event.h"
+
+
 
 static NSString *const CellIdentifier = @"MyCell";
 static NSString * const HeaderIdentifier = @"HeaderIdentifier";
@@ -40,10 +43,21 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
         [self twitterSplash];
     }
     [defaults synchronize];
-
+    /*for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }*/
     //[self setup];
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+-(void)viewWillAppear:(BOOL)animated{
+    self.events = [Event getAll];
 }
 #pragma mark - Setup
 - (void)setup
@@ -128,6 +142,9 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
         if (selectedItem.index == 4) {
             [self performSegueWithIdentifier:@"HomeToCalendar" sender:self];
         }
+        else if (selectedItem.index == 0){
+            [self performSegueWithIdentifier:@"HomeToNew" sender:self];
+        }
     };
     
     [_popMenu showMenuAtView:self.view];
@@ -148,12 +165,12 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 6;
+    return self.events.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -168,10 +185,12 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
         
         
     }
+    Event *event = self.events[indexPath.row];
+    cell.label.text = event.title;
     
     
     
-    [cell configureCellWithIndexPath:indexPath];
+    //[cell configureCellWithIndexPath:indexPath];
     
     /*if (indexPath.row == 0 && count != 1) {
         [self blinkTime:cell];
@@ -222,6 +241,10 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     }
     
     return direction;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"View Clicked = %i",(int)indexPath.row);
+    
 }
 
 - (void) twitterSplash

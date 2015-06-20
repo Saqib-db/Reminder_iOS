@@ -17,9 +17,20 @@
 		392CB2641B2713A000D55AA1 /* RAMCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2631B2713A000D55AA1 /* RAMCollectionViewCell.m */; };
 		392CB2671B2713C300D55AA1 /* RAMCollectionAuxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2661B2713C300D55AA1 /* RAMCollectionAuxView.m */; };
 		392CB26A1B27143000D55AA1 /* UIColor+additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 392CB2691B27143000D55AA1 /* UIColor+additions.m */; };
+		4602A45C1B35D62200A396F0 /* NoaLTStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4591B35D62200A396F0 /* NoaLTStd-Bold.otf */; };
+		4602A45D1B35D62200A396F0 /* NoaLTStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A45A1B35D62200A396F0 /* NoaLTStd-Light.otf */; };
+		4602A45E1B35D62200A396F0 /* NoaLTStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A45B1B35D62200A396F0 /* NoaLTStd-Regular.otf */; };
+		4602A4611B35D7E000A396F0 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602A4601B35D7E000A396F0 /* Event.m */; };
+		4602A4641B35DAFE00A396F0 /* ReminderDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602A4631B35DAFE00A396F0 /* ReminderDatabase.m */; };
+		4602A4671B35E22700A396F0 /* ReminderDB.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4661B35E22700A396F0 /* ReminderDB.sqlite3 */; };
+		4602A4741B35E46100A396F0 /* CaviarDreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4701B35E46100A396F0 /* CaviarDreams_Bold.ttf */; };
+		4602A4751B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4711B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf */; };
+		4602A4761B35E46100A396F0 /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4721B35E46100A396F0 /* CaviarDreams_Italic.ttf */; };
+		4602A4771B35E46100A396F0 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4731B35E46100A396F0 /* CaviarDreams.ttf */; };
 		46F32AC31B2B90DA0097F3B8 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */; };
 		46F4C46C1B2CDE2D00EAE205 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F4C46A1B2CDE2D00EAE205 /* Fabric.framework */; };
 		46F4C46D1B2CDE2D00EAE205 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F4C46B1B2CDE2D00EAE205 /* Crashlytics.framework */; };
+		46FCB2901B35FFCE00C7E373 /* CreateNewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FCB28F1B35FFCE00C7E373 /* CreateNewEventViewController.m */; };
 		6CC9CF816DCE8E1F46F25CA0 /* libPods-Reminder-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D57D4A46C566A768531EAD /* libPods-Reminder-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -55,10 +66,24 @@
 		392CB2681B27142500D55AA1 /* UIColor+additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+additions.h"; sourceTree = "<group>"; };
 		392CB2691B27143000D55AA1 /* UIColor+additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+additions.m"; sourceTree = "<group>"; };
 		44D57D4A46C566A768531EAD /* libPods-Reminder-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Reminder-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4602A4591B35D62200A396F0 /* NoaLTStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NoaLTStd-Bold.otf"; sourceTree = "<group>"; };
+		4602A45A1B35D62200A396F0 /* NoaLTStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NoaLTStd-Light.otf"; sourceTree = "<group>"; };
+		4602A45B1B35D62200A396F0 /* NoaLTStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NoaLTStd-Regular.otf"; sourceTree = "<group>"; };
+		4602A45F1B35D7E000A396F0 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		4602A4601B35D7E000A396F0 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		4602A4621B35DAFE00A396F0 /* ReminderDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReminderDatabase.h; path = caviar_dreams/ReminderDatabase.h; sourceTree = "<group>"; };
+		4602A4631B35DAFE00A396F0 /* ReminderDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReminderDatabase.m; path = caviar_dreams/ReminderDatabase.m; sourceTree = "<group>"; };
+		4602A4661B35E22700A396F0 /* ReminderDB.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ReminderDB.sqlite3; sourceTree = "<group>"; };
+		4602A4701B35E46100A396F0 /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
+		4602A4711B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_BoldItalic.ttf; sourceTree = "<group>"; };
+		4602A4721B35E46100A396F0 /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
+		4602A4731B35E46100A396F0 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		46F32AC11B2B90DA0097F3B8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		46F4C46A1B2CDE2D00EAE205 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		46F4C46B1B2CDE2D00EAE205 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		46FCB28E1B35FFCE00C7E373 /* CreateNewEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewEventViewController.h; sourceTree = "<group>"; };
+		46FCB28F1B35FFCE00C7E373 /* CreateNewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewEventViewController.m; sourceTree = "<group>"; };
 		BD9BD186F11FCAF695470FA7 /* Pods-Reminder-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminder-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reminder-iOS/Pods-Reminder-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +133,10 @@
 		392CB23B1B270BDD00D55AA1 /* Reminder-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4602A4661B35E22700A396F0 /* ReminderDB.sqlite3 */,
+				4602A4621B35DAFE00A396F0 /* ReminderDatabase.h */,
+				4602A4631B35DAFE00A396F0 /* ReminderDatabase.m */,
+				4602A4581B35D62200A396F0 /* Fonts */,
 				392CB2681B27142500D55AA1 /* UIColor+additions.h */,
 				392CB2691B27143000D55AA1 /* UIColor+additions.m */,
 				392CB2621B2713A000D55AA1 /* RAMCollectionViewCell.h */,
@@ -124,6 +153,10 @@
 				392CB23C1B270BDD00D55AA1 /* Supporting Files */,
 				46F32AC11B2B90DA0097F3B8 /* CalendarViewController.h */,
 				46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */,
+				4602A45F1B35D7E000A396F0 /* Event.h */,
+				4602A4601B35D7E000A396F0 /* Event.m */,
+				46FCB28E1B35FFCE00C7E373 /* CreateNewEventViewController.h */,
+				46FCB28F1B35FFCE00C7E373 /* CreateNewEventViewController.m */,
 			);
 			path = "Reminder-iOS";
 			sourceTree = "<group>";
@@ -152,6 +185,20 @@
 				392CB2571B270BDD00D55AA1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4602A4581B35D62200A396F0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4602A4701B35E46100A396F0 /* CaviarDreams_Bold.ttf */,
+				4602A4711B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf */,
+				4602A4721B35E46100A396F0 /* CaviarDreams_Italic.ttf */,
+				4602A4731B35E46100A396F0 /* CaviarDreams.ttf */,
+				4602A4591B35D62200A396F0 /* NoaLTStd-Bold.otf */,
+				4602A45A1B35D62200A396F0 /* NoaLTStd-Light.otf */,
+				4602A45B1B35D62200A396F0 /* NoaLTStd-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		598064654A91434C5766F6CA /* Pods */ = {
@@ -255,9 +302,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4602A4671B35E22700A396F0 /* ReminderDB.sqlite3 in Resources */,
 				392CB2481B270BDD00D55AA1 /* Main.storyboard in Resources */,
+				4602A4751B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf in Resources */,
 				392CB24D1B270BDD00D55AA1 /* LaunchScreen.xib in Resources */,
+				4602A4741B35E46100A396F0 /* CaviarDreams_Bold.ttf in Resources */,
+				4602A45D1B35D62200A396F0 /* NoaLTStd-Light.otf in Resources */,
+				4602A4771B35E46100A396F0 /* CaviarDreams.ttf in Resources */,
 				392CB24A1B270BDD00D55AA1 /* Images.xcassets in Resources */,
+				4602A45E1B35D62200A396F0 /* NoaLTStd-Regular.otf in Resources */,
+				4602A4761B35E46100A396F0 /* CaviarDreams_Italic.ttf in Resources */,
+				4602A45C1B35D62200A396F0 /* NoaLTStd-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,9 +377,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				392CB2451B270BDD00D55AA1 /* ViewController.m in Sources */,
+				4602A4641B35DAFE00A396F0 /* ReminderDatabase.m in Sources */,
+				46FCB2901B35FFCE00C7E373 /* CreateNewEventViewController.m in Sources */,
 				392CB2641B2713A000D55AA1 /* RAMCollectionViewCell.m in Sources */,
 				392CB2421B270BDD00D55AA1 /* AppDelegate.m in Sources */,
 				392CB2671B2713C300D55AA1 /* RAMCollectionAuxView.m in Sources */,
+				4602A4611B35D7E000A396F0 /* Event.m in Sources */,
 				392CB23F1B270BDD00D55AA1 /* main.m in Sources */,
 				392CB26A1B27143000D55AA1 /* UIColor+additions.m in Sources */,
 				46F32AC31B2B90DA0097F3B8 /* CalendarViewController.m in Sources */,

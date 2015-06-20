@@ -23,6 +23,11 @@
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (weak, nonatomic) IBOutlet UICollectionView *mainCollectionView;
 
+
+
+@property (strong,nonatomic) NSArray *events;
+
+
 - (IBAction)btnAction:(id)sender;
 
 @end

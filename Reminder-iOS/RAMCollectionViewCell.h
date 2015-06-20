@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface RAMCollectionViewCell : UICollectionViewCell
+@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) UIImageView *imageView;
+
+
+
 
 - (void)configureCellWithIndexPath:(NSIndexPath *)indexPath;
 

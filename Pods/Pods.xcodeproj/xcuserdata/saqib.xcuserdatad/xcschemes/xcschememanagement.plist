@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Reminder-iOS-IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Reminder-iOS-JTCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Reminder-iOS-sqlite3.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Reminder-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0981AE614D6F32DF92125BC3</key>
+		<key>1A407014AEAD28B4A466BBA8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>165DE1CF02CE0DF7FCF91A90</key>
+		<key>311544274F23685DDE5CFB7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1986E86A8D2AD36ECFBC7870</key>
+		<key>57C7D4E1A4284DF0B8B5FFC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53D9F072AB07103604855118</key>
+		<key>77495931B404C118CB72E89C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>69342F8C130F736C61794C3A</key>
+		<key>93A60FDDE0BD458CF1AF73EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1EF2733DA5CD986B6BA0FAC</key>
+		<key>9EE9C08C98022F6997D8F184</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DA932A4FC0542530126F1C19</key>
+		<key>A1CB1528754D54FC75C8CB1D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8584CD4E483D1831AE9D121</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB9314077538B4142EA0D2F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

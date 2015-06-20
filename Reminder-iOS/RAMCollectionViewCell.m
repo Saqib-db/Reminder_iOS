@@ -10,13 +10,17 @@
 #import "UIColor+additions.h"
 
 @interface RAMCollectionViewCell ()
-    @property (nonatomic, strong) UILabel *label;
+    
+
 @end
 
 @implementation RAMCollectionViewCell
 
+
+
+
 - (id)initWithFrame:(CGRect)frame
-{
+{    
     self = [super initWithFrame:frame];
     if (self) {
         [self setup];
@@ -38,15 +42,43 @@
 
 - (void)setupLabel
 {
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 60, 30)];
     
+    
+    float cellSize = self.frame.size.height/2;
+    
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.frame.size.width-(cellSize+7))/2, (self.frame.size.height-(cellSize+7+25))/2, cellSize, cellSize)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(self.imageView.center.x-30, self.imageView.frame.origin.y+cellSize, 60, 30)];
+    self.label.textColor = [UIColor whiteColor];
+    self.label.font = [UIFont fontWithName:@"ChalkboardSE-Bold" size:15];
+
+    self.imageView.image = [UIImage imageNamed:@"post_type_bubble_twitter"];
+    
+        
+    //self.imageView.center = self.center;
+
     [self addSubview:self.label];
+    [self addSubview:self.imageView];
+    
+    
+    
+   
+    
+    /*[self addConstraint:[NSLayoutConstraint
+                              constraintWithItem:self.imageView
+                              attribute:NSLayoutAttributeCenterY
+                              relatedBy:NSLayoutRelationEqual
+                              toItem:self
+                              attribute:NSLayoutAttributeCenterY
+                              multiplier:1.0
+                              constant:0.0]];*/
+    
+
 }
 
 #pragma mark - Configure
 - (void)configureCellWithIndexPath:(NSIndexPath *)indexPath
 {
-    self.label.text = [NSString stringWithFormat:@"Cell %ld", (long)(indexPath.row + 1)];
+    self.label.text = [NSString stringWithFormat:@"Event %ld", (long)(indexPath.row + 1)];
 }
 
 @end

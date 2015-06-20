@@ -6,6 +6,12 @@
 // project.
 
 
+// IQKeyboardManager
+#define COCOAPODS_POD_AVAILABLE_IQKeyboardManager
+#define COCOAPODS_VERSION_MAJOR_IQKeyboardManager 3
+#define COCOAPODS_VERSION_MINOR_IQKeyboardManager 2
+#define COCOAPODS_VERSION_PATCH_IQKeyboardManager 4
+
 // JTCalendar
 #define COCOAPODS_POD_AVAILABLE_JTCalendar
 #define COCOAPODS_VERSION_MAJOR_JTCalendar 1
@@ -41,4 +47,16 @@
 #define COCOAPODS_VERSION_MAJOR_pop 1
 #define COCOAPODS_VERSION_MINOR_pop 0
 #define COCOAPODS_VERSION_PATCH_pop 7
+
+// sqlite3
+#define COCOAPODS_POD_AVAILABLE_sqlite3
+#define COCOAPODS_VERSION_MAJOR_sqlite3 3
+#define COCOAPODS_VERSION_MINOR_sqlite3 8
+#define COCOAPODS_VERSION_PATCH_sqlite3 10
+
+// sqlite3/common
+#define COCOAPODS_POD_AVAILABLE_sqlite3_common
+#define COCOAPODS_VERSION_MAJOR_sqlite3_common 3
+#define COCOAPODS_VERSION_MINOR_sqlite3_common 8
+#define COCOAPODS_VERSION_PATCH_sqlite3_common 10
 

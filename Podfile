@@ -7,6 +7,9 @@ pod 'PopMenu'
 pod 'RAMCollectionViewFlemishBondLayout', '~> 1.1.1'
 pod 'JTCalendar', '~> 1.1'
 pod 'SKSplashView'
+pod 'sqlite3'
+pod 'IQKeyboardManager'
+
 end
 
 target 'Reminder-iOSTests' do
