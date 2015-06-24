@@ -9,6 +9,7 @@ pod 'JTCalendar', '~> 1.1'
 pod 'SKSplashView'
 pod 'sqlite3'
 pod 'IQKeyboardManager'
+pod 'iOSSharedViewTransition', '~> 1.0.2'
 
 end
 

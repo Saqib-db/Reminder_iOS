@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EB9314077538B4142EA0D2F7"
+               BlueprintIdentifier = "3ECEE811CA737C4518336708"
                BuildableName = "libPods-Reminder-iOS-SKSplashView.a"
                BlueprintName = "Pods-Reminder-iOS-SKSplashView"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -42,6 +42,12 @@
 #define COCOAPODS_VERSION_MINOR_XHRealTimeBlur 7
 #define COCOAPODS_VERSION_PATCH_XHRealTimeBlur 0
 
+// iOSSharedViewTransition
+#define COCOAPODS_POD_AVAILABLE_iOSSharedViewTransition
+#define COCOAPODS_VERSION_MAJOR_iOSSharedViewTransition 1
+#define COCOAPODS_VERSION_MINOR_iOSSharedViewTransition 0
+#define COCOAPODS_VERSION_PATCH_iOSSharedViewTransition 2
+
 // pop
 #define COCOAPODS_POD_AVAILABLE_pop
 #define COCOAPODS_VERSION_MAJOR_pop 1

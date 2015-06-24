@@ -16,7 +16,8 @@
 #import "RAMCollectionAuxView.h"
 #import "SKSplashIcon.h"
 #import "Event.h"
-
+#import "DetailViewController.h"
+#import "ASFSharedViewTransition.h"
 
 
 static NSString *const CellIdentifier = @"MyCell";
@@ -26,6 +27,8 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
 
 @interface ViewController (){
     int count;
+    UICollectionView *collectionView;
+    
 }
 
 @end
@@ -73,7 +76,7 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     self.collectionViewLayout.highlightedCellHeight = (self.view.frame.size.width-(self.view.frame.size.width/2));//200.f;
     self.collectionViewLayout.highlightedCellWidth = (self.view.frame.size.width-(self.view.frame.size.width/2.7));//   200.f;
     
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.collectionViewLayout];
+     collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.collectionViewLayout];
     
     //self.mainCollectionView.collectionViewLayout = self.collectionViewLayout;
     
@@ -105,27 +108,27 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
 - (void)showMenu {
     NSMutableArray *items = [[NSMutableArray alloc] initWithCapacity:3];
     
-    MenuItem *menuItem = [MenuItem itemWithTitle:@"New Event" iconName:@"post_type_bubble_flickr"];
+    MenuItem *menuItem = [MenuItem itemWithTitle:@"New Event" iconName:@"menu_icon-new-event"];
     menuItem.index = 0;
     [items addObject:menuItem];
     
-    menuItem = [MenuItem itemWithTitle:@"Time Manager" iconName:@"post_type_bubble_googleplus" glowColor:[UIColor colorWithRed:0.840 green:0.264 blue:0.208 alpha:0.800]];
+    menuItem = [MenuItem itemWithTitle:@"Time Manager" iconName:@"menu_icon-time-manager" glowColor:[UIColor colorWithRed:0.840 green:0.264 blue:0.208 alpha:0.800]];
     menuItem.index = 1;
     [items addObject:menuItem];
     
-    menuItem = [MenuItem itemWithTitle:@"Stop Watch" iconName:@"post_type_bubble_instagram" glowColor:[UIColor colorWithRed:0.232 green:0.442 blue:0.687 alpha:0.800]];
+    menuItem = [MenuItem itemWithTitle:@"Stop Watch" iconName:@"menu_icon-stop-watch" glowColor:[UIColor colorWithRed:0.232 green:0.442 blue:0.687 alpha:0.800]];
     menuItem.index = 2;
     [items addObject:menuItem];
     
-    menuItem = [MenuItem itemWithTitle:@"Contacts" iconName:@"post_type_bubble_twitter" glowColor:[UIColor colorWithRed:0.000 green:0.509 blue:0.687 alpha:0.800]];
+    menuItem = [MenuItem itemWithTitle:@"Contacts" iconName:@"menu_icon-contacts" glowColor:[UIColor colorWithRed:0.000 green:0.509 blue:0.687 alpha:0.800]];
     menuItem.index = 3;
     [items addObject:menuItem];
     
-    menuItem = [MenuItem itemWithTitle:@"Calendar" iconName:@"post_type_bubble_youtube" glowColor:[UIColor colorWithRed:0.687 green:0.164 blue:0.246 alpha:0.800]];
+    menuItem = [MenuItem itemWithTitle:@"Calendar" iconName:@"menu_icon-calendar" glowColor:[UIColor colorWithRed:0.687 green:0.164 blue:0.246 alpha:0.800]];
     menuItem.index = 4;
     [items addObject:menuItem];
     
-    menuItem = [MenuItem itemWithTitle:@"Important Evetns" iconName:@"post_type_bubble_facebook" glowColor:[UIColor colorWithRed:0.258 green:0.245 blue:0.687 alpha:0.800]];
+    menuItem = [MenuItem itemWithTitle:@"Important Evetns" iconName:@"menu_icon-important-event" glowColor:[UIColor colorWithRed:0.258 green:0.245 blue:0.687 alpha:0.800]];
     menuItem.index = 5;
     [items addObject:menuItem];
     
@@ -146,7 +149,7 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
             [self performSegueWithIdentifier:@"HomeToNew" sender:self];
         }
     };
-    
+
     [_popMenu showMenuAtView:self.view];
     
     //    [_popMenu showMenuAtView:self.view startPoint:CGPointMake(CGRectGetWidth(self.view.bounds) - 60, CGRectGetHeight(self.view.bounds)) endPoint:CGPointMake(60, CGRectGetHeight(self.view.bounds))];
@@ -244,6 +247,8 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"View Clicked = %i",(int)indexPath.row);
+    [self performSegueWithIdentifier:@"HomeToDetailsEvents" sender:self];
+
     
 }
 
@@ -317,6 +322,24 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
 {
     [self showMenu];
 
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[DetailViewController class]]) {
+        // Get the selected item index path
+        NSIndexPath *selectedIndexPath = [[collectionView indexPathsForSelectedItems] firstObject];
+        
+        // Set the thing on the view controller we're about to show
+        if (selectedIndexPath != nil) {
+            DetailViewController *detailVC = segue.destinationViewController;
+            //detailVC.image = self.arrImages[selectedIndexPath.row];
+        }
+    }
+}
+#pragma mark - ASFSharedViewTransitionDataSource
+
+- (UIView *)sharedView
+{
+    return [collectionView cellForItemAtIndexPath:[[collectionView indexPathsForSelectedItems] firstObject]];
 }
 
 @end

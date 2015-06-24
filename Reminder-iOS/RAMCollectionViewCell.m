@@ -46,6 +46,9 @@
     
     float cellSize = self.frame.size.height/2;
     
+    NSLog(@"Size for the image = %f * %f",cellSize , cellSize);
+    
+    
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.frame.size.width-(cellSize+7))/2, (self.frame.size.height-(cellSize+7+25))/2, cellSize, cellSize)];
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(self.imageView.center.x-30, self.imageView.frame.origin.y+cellSize, 60, 30)];
     self.label.textColor = [UIColor whiteColor];

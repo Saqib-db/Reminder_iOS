@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A407014AEAD28B4A466BBA8"
+               BlueprintIdentifier = "D816E2EBB0DD91D8251442DA"
                BuildableName = "libPods-Reminder-iOS-sqlite3.a"
                BlueprintName = "Pods-Reminder-iOS-sqlite3"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9EE9C08C98022F6997D8F184"
+               BlueprintIdentifier = "30D15419B26124B9EA39C4B3"
                BuildableName = "libPods-Reminder-iOS-RAMCollectionViewFlemishBondLayout.a"
                BlueprintName = "Pods-Reminder-iOS-RAMCollectionViewFlemishBondLayout"
                ReferencedContainer = "container:Pods.xcodeproj">

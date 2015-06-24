@@ -1,4 +1,5 @@
 PODS:
+  - iOSSharedViewTransition (1.0.2)
   - IQKeyboardManager (3.2.4)
   - JTCalendar (1.2.3)
   - pop (1.0.7)
@@ -13,6 +14,7 @@ PODS:
   - XHRealTimeBlur (1.7)
 
 DEPENDENCIES:
+  - iOSSharedViewTransition (~> 1.0.2)
   - IQKeyboardManager
   - JTCalendar (~> 1.1)
   - PopMenu
@@ -21,6 +23,7 @@ DEPENDENCIES:
   - sqlite3
 
 SPEC CHECKSUMS:
+  iOSSharedViewTransition: d4bdb3662b51d780b7a0646da8ff2158dbb2e43c
   IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
   JTCalendar: 246ea3e338fb97624846ec77cdcde448242c4d5c
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923

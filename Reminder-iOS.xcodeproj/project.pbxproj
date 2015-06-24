@@ -27,6 +27,7 @@
 		4602A4751B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4711B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf */; };
 		4602A4761B35E46100A396F0 /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4721B35E46100A396F0 /* CaviarDreams_Italic.ttf */; };
 		4602A4771B35E46100A396F0 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4731B35E46100A396F0 /* CaviarDreams.ttf */; };
+		46ECF3BB1B36C15800D1E07A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46ECF3BA1B36C15800D1E07A /* DetailViewController.m */; };
 		46F32AC31B2B90DA0097F3B8 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */; };
 		46F4C46C1B2CDE2D00EAE205 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F4C46A1B2CDE2D00EAE205 /* Fabric.framework */; };
 		46F4C46D1B2CDE2D00EAE205 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F4C46B1B2CDE2D00EAE205 /* Crashlytics.framework */; };
@@ -78,6 +79,8 @@
 		4602A4711B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_BoldItalic.ttf; sourceTree = "<group>"; };
 		4602A4721B35E46100A396F0 /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
 		4602A4731B35E46100A396F0 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
+		46ECF3B91B36C15800D1E07A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		46ECF3BA1B36C15800D1E07A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		46F32AC11B2B90DA0097F3B8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		46F4C46A1B2CDE2D00EAE205 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				4602A4601B35D7E000A396F0 /* Event.m */,
 				46FCB28E1B35FFCE00C7E373 /* CreateNewEventViewController.h */,
 				46FCB28F1B35FFCE00C7E373 /* CreateNewEventViewController.m */,
+				46ECF3B91B36C15800D1E07A /* DetailViewController.h */,
+				46ECF3BA1B36C15800D1E07A /* DetailViewController.m */,
 			);
 			path = "Reminder-iOS";
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				392CB2421B270BDD00D55AA1 /* AppDelegate.m in Sources */,
 				392CB2671B2713C300D55AA1 /* RAMCollectionAuxView.m in Sources */,
 				4602A4611B35D7E000A396F0 /* Event.m in Sources */,
+				46ECF3BB1B36C15800D1E07A /* DetailViewController.m in Sources */,
 				392CB23F1B270BDD00D55AA1 /* main.m in Sources */,
 				392CB26A1B27143000D55AA1 /* UIColor+additions.m in Sources */,
 				46F32AC31B2B90DA0097F3B8 /* CalendarViewController.m in Sources */,
@@ -524,7 +530,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3218f5cf-c0a2-4347-8876-ac1f773225aa";
+				PROVISIONING_PROFILE = "e18816ed-abf2-4619-9569-95516da5b3c4";
 			};
 			name = Debug;
 		};
@@ -542,7 +548,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3218f5cf-c0a2-4347-8876-ac1f773225aa";
+				PROVISIONING_PROFILE = "e18816ed-abf2-4619-9569-95516da5b3c4";
 			};
 			name = Release;
 		};

@@ -10,6 +10,9 @@
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import "ReminderDatabase.h"
+#import "DetailViewController.h"
+#import "ASFSharedViewTransition.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,6 +33,11 @@
         [defaults removeObjectForKey:@"start_from_scratch"];
     }
     [defaults synchronize];
+    
+    [ASFSharedViewTransition addTransitionWithFromViewControllerClass:[ViewController class]
+                                                ToViewControllerClass:[DetailViewController class]
+                                             WithNavigationController:(UINavigationController *)self.window.rootViewController
+                                                         WithDuration:0.3f];
     return YES;
 }
 

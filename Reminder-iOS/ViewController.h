@@ -11,8 +11,9 @@
 
 #import "PopMenu.h"
 #import "SKSplashView.h"
+#import "ASFSharedViewTransition.h"
 
-@interface ViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, RAMCollectionViewFlemishBondLayoutDelegate,SKSplashDelegate,UITabBarDelegate>
+@interface ViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, RAMCollectionViewFlemishBondLayoutDelegate,SKSplashDelegate,UITabBarDelegate,ASFSharedViewTransitionDataSource>
 @property (nonatomic, strong) RAMCollectionViewFlemishBondLayout *collectionViewLayout;
 @property (nonatomic, readonly) UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIButton *btn;
@@ -21,7 +22,6 @@
 @property (strong, nonatomic) SKSplashView *splashView;
 @property (strong, nonatomic) UIView *flashView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
-@property (weak, nonatomic) IBOutlet UICollectionView *mainCollectionView;
 
 
 
