@@ -92,4 +92,8 @@
     return event;
 }
 
+-(BOOL) destroy{
+    return [Event updateDataForQuery:[NSString stringWithFormat: @"DELETE FROM Events WHERE Event_Id = %i", self.eventId]];
+}
+
 @end

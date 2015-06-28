@@ -32,6 +32,9 @@
 		46F4C46C1B2CDE2D00EAE205 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F4C46A1B2CDE2D00EAE205 /* Fabric.framework */; };
 		46F4C46D1B2CDE2D00EAE205 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F4C46B1B2CDE2D00EAE205 /* Crashlytics.framework */; };
 		46FCB2901B35FFCE00C7E373 /* CreateNewEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FCB28F1B35FFCE00C7E373 /* CreateNewEventViewController.m */; };
+		46FF02E11B3F37C50003DA1F /* TimeManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF02E01B3F37C50003DA1F /* TimeManagerViewController.m */; };
+		46FF02E61B3F39480003DA1F /* Example2PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF02E31B3F39480003DA1F /* Example2PieView.m */; };
+		46FF02E71B3F39480003DA1F /* MyPieElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 46FF02E51B3F39480003DA1F /* MyPieElement.m */; };
 		6CC9CF816DCE8E1F46F25CA0 /* libPods-Reminder-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D57D4A46C566A768531EAD /* libPods-Reminder-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +90,12 @@
 		46F4C46B1B2CDE2D00EAE205 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		46FCB28E1B35FFCE00C7E373 /* CreateNewEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNewEventViewController.h; sourceTree = "<group>"; };
 		46FCB28F1B35FFCE00C7E373 /* CreateNewEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNewEventViewController.m; sourceTree = "<group>"; };
+		46FF02DF1B3F37C50003DA1F /* TimeManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeManagerViewController.h; sourceTree = "<group>"; };
+		46FF02E01B3F37C50003DA1F /* TimeManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeManagerViewController.m; sourceTree = "<group>"; };
+		46FF02E21B3F39480003DA1F /* Example2PieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example2PieView.h; sourceTree = "<group>"; };
+		46FF02E31B3F39480003DA1F /* Example2PieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example2PieView.m; sourceTree = "<group>"; };
+		46FF02E41B3F39480003DA1F /* MyPieElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPieElement.h; sourceTree = "<group>"; };
+		46FF02E51B3F39480003DA1F /* MyPieElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPieElement.m; sourceTree = "<group>"; };
 		BD9BD186F11FCAF695470FA7 /* Pods-Reminder-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminder-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Reminder-iOS/Pods-Reminder-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +145,10 @@
 		392CB23B1B270BDD00D55AA1 /* Reminder-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				46FF02E21B3F39480003DA1F /* Example2PieView.h */,
+				46FF02E31B3F39480003DA1F /* Example2PieView.m */,
+				46FF02E41B3F39480003DA1F /* MyPieElement.h */,
+				46FF02E51B3F39480003DA1F /* MyPieElement.m */,
 				4602A4661B35E22700A396F0 /* ReminderDB.sqlite3 */,
 				4602A4621B35DAFE00A396F0 /* ReminderDatabase.h */,
 				4602A4631B35DAFE00A396F0 /* ReminderDatabase.m */,
@@ -162,6 +175,8 @@
 				46FCB28F1B35FFCE00C7E373 /* CreateNewEventViewController.m */,
 				46ECF3B91B36C15800D1E07A /* DetailViewController.h */,
 				46ECF3BA1B36C15800D1E07A /* DetailViewController.m */,
+				46FF02DF1B3F37C50003DA1F /* TimeManagerViewController.h */,
+				46FF02E01B3F37C50003DA1F /* TimeManagerViewController.m */,
 			);
 			path = "Reminder-iOS";
 			sourceTree = "<group>";
@@ -384,10 +399,13 @@
 				392CB2451B270BDD00D55AA1 /* ViewController.m in Sources */,
 				4602A4641B35DAFE00A396F0 /* ReminderDatabase.m in Sources */,
 				46FCB2901B35FFCE00C7E373 /* CreateNewEventViewController.m in Sources */,
+				46FF02E11B3F37C50003DA1F /* TimeManagerViewController.m in Sources */,
+				46FF02E61B3F39480003DA1F /* Example2PieView.m in Sources */,
 				392CB2641B2713A000D55AA1 /* RAMCollectionViewCell.m in Sources */,
 				392CB2421B270BDD00D55AA1 /* AppDelegate.m in Sources */,
 				392CB2671B2713C300D55AA1 /* RAMCollectionAuxView.m in Sources */,
 				4602A4611B35D7E000A396F0 /* Event.m in Sources */,
+				46FF02E71B3F39480003DA1F /* MyPieElement.m in Sources */,
 				46ECF3BB1B36C15800D1E07A /* DetailViewController.m in Sources */,
 				392CB23F1B270BDD00D55AA1 /* main.m in Sources */,
 				392CB26A1B27143000D55AA1 /* UIColor+additions.m in Sources */,

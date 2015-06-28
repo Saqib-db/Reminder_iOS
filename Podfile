@@ -10,6 +10,8 @@ pod 'SKSplashView'
 pod 'sqlite3'
 pod 'IQKeyboardManager'
 pod 'iOSSharedViewTransition', '~> 1.0.2'
+pod 'MagicPie'
+
 
 end
 

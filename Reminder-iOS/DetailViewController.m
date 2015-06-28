@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import "ASFSharedViewTransition.h"
 
+
+
 @interface DetailViewController ()
 
 @end
@@ -17,6 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
+    self.imageView.image = [UIImage imageNamed:self.event.icon];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.eventBGview.backgroundColor = self.color;
+    self.navigationController.navigationBar.barTintColor = self.color;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.eventTitleText.text = self.event.title;
+    [self.navigationController.navigationBar
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+
+     
+    
     // Do any additional setup after loading the view.
 }
 
@@ -39,5 +54,24 @@
 - (UIView *)sharedView
 {
     return _imageView;
+}
+- (IBAction)editBtnAction:(id)sender {
+}
+
+- (IBAction)deleteBtnAction:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete"
+                                                    message:@"Do You Want to Delete the Selected Event?"
+                                                   delegate:self
+                                          cancelButtonTitle:@"No"
+                                          otherButtonTitles:@"Yes",nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    // the user clicked OK
+    if (buttonIndex == 1) {
+        self.event.destroy;
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 @end

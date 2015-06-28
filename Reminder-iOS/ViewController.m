@@ -46,6 +46,24 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
         [self twitterSplash];
     }
     [defaults synchronize];
+    
+    
+    UITabBarController *tabBarController = self.tabBarController;
+    UITabBar *tabBar = tabBarController.tabBar;
+    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
+    
+    UIImage *image = [[UIImage imageNamed:@"more-icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [tabBarItem1 setImage:image];
+    tabBarItem1.selectedImage = image;
+    //tabBar.alpha = 0.5;
+    
+    tabBar.backgroundImage = [UIImage imageNamed:@""];
+    
+    
+    
+    
+    
+    
     /*for (NSString* family in [UIFont familyNames])
     {
         NSLog(@"%@", family);
@@ -61,6 +79,12 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
 }
 -(void)viewWillAppear:(BOOL)animated{
     self.events = [Event getAll];
+    [collectionView reloadData];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 #pragma mark - Setup
 - (void)setup
@@ -128,16 +152,19 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     menuItem.index = 4;
     [items addObject:menuItem];
     
-    menuItem = [MenuItem itemWithTitle:@"Important Evetns" iconName:@"menu_icon-important-event" glowColor:[UIColor colorWithRed:0.258 green:0.245 blue:0.687 alpha:0.800]];
+    menuItem = [MenuItem itemWithTitle:@"Imp Evetns" iconName:@"menu_icon-important-event" glowColor:[UIColor colorWithRed:0.258 green:0.245 blue:0.687 alpha:0.800]];
     menuItem.index = 5;
     [items addObject:menuItem];
-    
+    //self.tabBarController.tabBar.alpha = 1;
     if (!_popMenu) {
         _popMenu = [[PopMenu alloc] initWithFrame:self.view.bounds items:items];
         _popMenu.menuAnimationType = kPopMenuAnimationTypeNetEase;
+        
     }
     if (_popMenu.isShowed) {
         [_popMenu dismissMenu];
+        //self.tabBarController.tabBar.alpha = 0.5;
+
         return;
     }
     _popMenu.didSelectedItemCompletion = ^(MenuItem *selectedItem) {
@@ -147,6 +174,9 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
         }
         else if (selectedItem.index == 0){
             [self performSegueWithIdentifier:@"HomeToNew" sender:self];
+        }
+        else if (selectedItem.index == 1){
+            [self performSegueWithIdentifier:@"HomeToTimeManager" sender:self];
         }
     };
 
@@ -176,11 +206,11 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     return self.events.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionViewObj cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     RAMCollectionViewCell *cell;
     if(cell == nil){
-        cell = (RAMCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+        cell = (RAMCollectionViewCell *)[collectionViewObj dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
         CGRect frameRect = cell.frame;
         frameRect.size.width -= 7;
         frameRect.size.height -= 7;
@@ -190,6 +220,8 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     }
     Event *event = self.events[indexPath.row];
     cell.label.text = event.title;
+    cell.imageView.image = [UIImage imageNamed:event.icon];
+    
     
     
     
@@ -207,15 +239,15 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     return cell;
 }
 
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath;
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionViewObj viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath;
 {
     UICollectionReusableView *titleView;
     
     if (kind == RAMCollectionViewFlemishBondHeaderKind) {
-        titleView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:HeaderIdentifier forIndexPath:indexPath];
+        titleView = [collectionViewObj dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:HeaderIdentifier forIndexPath:indexPath];
         ((RAMCollectionAuxView *)titleView).label.text = @"Header";
     } else if (kind == RAMCollectionViewFlemishBondFooterKind) {
-        titleView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:FooterIdentifier forIndexPath:indexPath];
+        titleView = [collectionViewObj dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:FooterIdentifier forIndexPath:indexPath];
         ((RAMCollectionAuxView *)titleView).label.text = @"Footer";
     }
     
@@ -242,12 +274,13 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     } else {
         direction = RAMCollectionViewFlemishBondLayoutGroupDirectionLeft;
     }
-    
     return direction;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"View Clicked = %i",(int)indexPath.row);
     [self performSegueWithIdentifier:@"HomeToDetailsEvents" sender:self];
+
+    
 
     
 }
@@ -260,8 +293,8 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     [self.view addSubview:imageView];*/
     //Twitter style splash
     self.navigationController.navigationBarHidden = YES;
-    SKSplashIcon *twitterSplashIcon = [[SKSplashIcon alloc] initWithImage:[UIImage imageNamed:@"twitter_icon.png"] animationType:SKIconAnimationTypeBounce];
-    UIColor *twitterColor = [UIColor colorWithRed:0.25098 green:0.6 blue:1.0 alpha:1.0];
+    SKSplashIcon *twitterSplashIcon = [[SKSplashIcon alloc] initWithImage:[UIImage imageNamed:@"Clock_main"] animationType:SKIconAnimationTypeBounce];
+    UIColor *twitterColor = [UIColor colorWithRed:(49/255.0) green:(219/255.0) blue:(31/255.0) alpha:1.0];
     _splashView = [[SKSplashView alloc] initWithSplashIcon:twitterSplashIcon backgroundColor:twitterColor animationType:SKSplashAnimationTypeNone];
     _splashView.delegate = self; //Optional -> if you want to receive updates on animation beginning/end
     _splashView.animationDuration = 1; //Optional -> set animation duration. Default: 1s
@@ -275,6 +308,7 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     NSLog(@"Started animating from delegate");
     //To start activity animation when splash animation starts
     //[_indicatorView startAnimating];
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 - (void) splashViewDidEndAnimating:(SKSplashView *)splashView
@@ -282,7 +316,9 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     NSLog(@"Stopped animating from delegate");
     //To stop activity animation when splash animation ends
     //[_indicatorView stopAnimating];
+    self.tabBarController.tabBar.hidden = NO;
     [self setup];
+    
 }
 -(void)flashView:(UIView *)view {
     NSLog(@"called");
@@ -331,6 +367,11 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
         // Set the thing on the view controller we're about to show
         if (selectedIndexPath != nil) {
             DetailViewController *detailVC = segue.destinationViewController;
+            detailVC.image = [UIImage imageNamed:@"post_type_bubble_twitter"];
+            detailVC.event = self.events[selectedIndexPath.row];
+            
+            RAMCollectionViewCell *cell = (RAMCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:selectedIndexPath];
+            detailVC.color = cell.backgroundColor;
             //detailVC.image = self.arrImages[selectedIndexPath.row];
         }
     }

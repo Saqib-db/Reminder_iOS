@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B0DE64C3C293916C0951D6F3"
+               BlueprintIdentifier = "1BC9095C3B025C41D5A1C7F8"
                BuildableName = "libPods-Reminder-iOS-pop.a"
                BlueprintName = "Pods-Reminder-iOS-pop"
                ReferencedContainer = "container:Pods.xcodeproj">

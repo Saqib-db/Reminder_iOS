@@ -50,9 +50,11 @@
     
     
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.frame.size.width-(cellSize+7))/2, (self.frame.size.height-(cellSize+7+25))/2, cellSize, cellSize)];
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(self.imageView.center.x-30, self.imageView.frame.origin.y+cellSize, 60, 30)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(self.imageView.center.x-(self.frame.size.width/2), self.imageView.frame.origin.y+cellSize, self.frame.size.width, 30)];
     self.label.textColor = [UIColor whiteColor];
     self.label.font = [UIFont fontWithName:@"ChalkboardSE-Bold" size:15];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.label.textAlignment = NSTextAlignmentCenter;
 
     self.imageView.image = [UIImage imageNamed:@"post_type_bubble_twitter"];
     

@@ -27,5 +27,6 @@
 +(NSArray*) getAll;
 -(BOOL) saveToDb ;
 +(Event*) findByeventId:(int) eventId;
+-(BOOL) destroy;
 
 @end

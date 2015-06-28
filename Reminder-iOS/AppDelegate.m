@@ -38,6 +38,8 @@
                                                 ToViewControllerClass:[DetailViewController class]
                                              WithNavigationController:(UINavigationController *)self.window.rootViewController
                                                          WithDuration:0.3f];
+
+    
     return YES;
 }
 

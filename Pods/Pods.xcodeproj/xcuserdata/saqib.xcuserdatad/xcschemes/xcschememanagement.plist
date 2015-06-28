@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Reminder-iOS-MagicPie.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Reminder-iOS-PopMenu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,52 +62,57 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2CEF4B96FB6CDDE4E2C01794</key>
+		<key>0BBFF6FEE2A2B5A11D2D3A21</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30D15419B26124B9EA39C4B3</key>
+		<key>10D4A9068808E1B9F82F3432</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3ECEE811CA737C4518336708</key>
+		<key>1BC9095C3B025C41D5A1C7F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4A506E7DACB91F0F7ED8E3B0</key>
+		<key>42E776CE638D02372916FE93</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D58F591DBCB4D0430D0D904</key>
+		<key>444BF117C79D285245530754</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>935D27CA7A65D09A29A416E1</key>
+		<key>4B8F743B2F725D030AC59983</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A59F3124643C4D644A8A3CE9</key>
+		<key>53A181A554E4D5FE5440AD37</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B0DE64C3C293916C0951D6F3</key>
+		<key>AC7E02560A19CCF50EDD7FD5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D816E2EBB0DD91D8251442DA</key>
+		<key>D3F9509C7BEAE7D3BFDED045</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E4506A44A6918D4D2EC9054F</key>
+		<key>F4E724B8C6D8C6892E4475B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4EFABC54779D1CA7D9B430D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

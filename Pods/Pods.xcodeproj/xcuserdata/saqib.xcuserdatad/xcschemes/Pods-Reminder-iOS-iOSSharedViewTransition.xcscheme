@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A59F3124643C4D644A8A3CE9"
+               BlueprintIdentifier = "4B8F743B2F725D030AC59983"
                BuildableName = "libPods-Reminder-iOS-iOSSharedViewTransition.a"
                BlueprintName = "Pods-Reminder-iOS-iOSSharedViewTransition"
                ReferencedContainer = "container:Pods.xcodeproj">
