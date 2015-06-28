@@ -24,15 +24,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    [self.view sendSubviewToBack:self.pieContainer];
+
+    self.pieContainer.contentSize=CGSizeMake(320,700);
+    [self.pieContainer setContentOffset:CGPointMake(0, 64)];
+
+    
     // Do any additional setup after loading the view..
     for(int year = 1; year <= 12; year++){
-        MyPieElement* elem = [MyPieElement pieElementWithValue:(5+arc4random()%8) color:[self randomColor]];
+        //MyPieElement* elem = [MyPieElement pieElementWithValue:(5+arc4random()%8) color:[self randomColor]];
+        MyPieElement* elem ;
+        if (year == 10) {
+            elem = [MyPieElement pieElementWithValue:30 color:[UIColor redColor]];
+        }
+        else{
+            elem = [MyPieElement pieElementWithValue:30 color:[UIColor greenColor]];
+        }
         elem.title = [NSString stringWithFormat:@"%d am", year];
         [pieView.layer addValues:@[elem] animated:NO];
     }
     for(int year = 1; year <= 12; year++){
-        MyPieElement* elem = [MyPieElement pieElementWithValue:(5+arc4random()%8) color:[self randomColor]];
-        elem.title = [NSString stringWithFormat:@"%d pm", year];
+        MyPieElement* elem ;
+        if (year == 4 || year == 5) {
+            elem = [MyPieElement pieElementWithValue:30 color:[UIColor redColor]];
+        }
+        else{
+            elem = [MyPieElement pieElementWithValue:30 color:[UIColor greenColor]];
+        }        elem.title = [NSString stringWithFormat:@"%d pm", year];
         [pieView2.layer addValues:@[elem] animated:NO];
     }
     //mutch easier do this with array outside

@@ -56,6 +56,7 @@
     return _imageView;
 }
 - (IBAction)editBtnAction:(id)sender {
+    [self showUnderDevelopement];
 }
 
 - (IBAction)deleteBtnAction:(id)sender {
@@ -73,5 +74,14 @@
         self.event.destroy;
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
+}
+
+-(void)showUnderDevelopement{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Under Developement"
+                                                    message:@"The page or service is still under developement."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil,nil];
+    [alert show];
 }
 @end

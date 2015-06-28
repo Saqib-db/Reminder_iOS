@@ -20,7 +20,7 @@ static sqlite3* _connection;
 +(void) checkAndCreateDatabase{
     BOOL success;
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSString *databasePath = [[self getDocumentDirectory] stringByAppendingPathComponent:@"ReminderDB.sqlite3"];
+    NSString *databasePath = [[self getDocumentDirectory] stringByAppendingPathComponent:@"bossched.sqlite"];
     success = [fileManager fileExistsAtPath:databasePath];
     if(success) {
         NSLog(@"database exists: %@", databasePath);
@@ -28,7 +28,7 @@ static sqlite3* _connection;
     else{
         NSLog(@"database doesn't exist, copying: %@", databasePath);
         NSError* error;
-        NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"ReminderDB.sqlite3"];
+        NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"bossched.sqlite"];
         [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:&error];
         if(error != nil) {
             NSLog(@"Got an error: %@", error);
@@ -38,7 +38,7 @@ static sqlite3* _connection;
 
 +(sqlite3*) connection {
     if(_connection == nil) {
-        NSString *sqLiteDb = [[self getDocumentDirectory] stringByAppendingPathComponent:@"ReminderDB.sqlite3"];
+        NSString *sqLiteDb = [[self getDocumentDirectory] stringByAppendingPathComponent:@"bossched.sqlite"];
         
         int rc;
         if ((rc=sqlite3_open([sqLiteDb UTF8String], &_connection)) != SQLITE_OK) {

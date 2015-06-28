@@ -22,11 +22,11 @@
 		4602A45E1B35D62200A396F0 /* NoaLTStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A45B1B35D62200A396F0 /* NoaLTStd-Regular.otf */; };
 		4602A4611B35D7E000A396F0 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602A4601B35D7E000A396F0 /* Event.m */; };
 		4602A4641B35DAFE00A396F0 /* ReminderDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4602A4631B35DAFE00A396F0 /* ReminderDatabase.m */; };
-		4602A4671B35E22700A396F0 /* ReminderDB.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4661B35E22700A396F0 /* ReminderDB.sqlite3 */; };
 		4602A4741B35E46100A396F0 /* CaviarDreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4701B35E46100A396F0 /* CaviarDreams_Bold.ttf */; };
 		4602A4751B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4711B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf */; };
 		4602A4761B35E46100A396F0 /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4721B35E46100A396F0 /* CaviarDreams_Italic.ttf */; };
 		4602A4771B35E46100A396F0 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4602A4731B35E46100A396F0 /* CaviarDreams.ttf */; };
+		4690AB3D1B403ACE00C29C44 /* bossched.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4690AB3C1B403ACE00C29C44 /* bossched.sqlite */; };
 		46ECF3BB1B36C15800D1E07A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46ECF3BA1B36C15800D1E07A /* DetailViewController.m */; };
 		46F32AC31B2B90DA0097F3B8 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46F32AC21B2B90DA0097F3B8 /* CalendarViewController.m */; };
 		46F4C46C1B2CDE2D00EAE205 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F4C46A1B2CDE2D00EAE205 /* Fabric.framework */; };
@@ -77,11 +77,11 @@
 		4602A4601B35D7E000A396F0 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		4602A4621B35DAFE00A396F0 /* ReminderDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReminderDatabase.h; path = caviar_dreams/ReminderDatabase.h; sourceTree = "<group>"; };
 		4602A4631B35DAFE00A396F0 /* ReminderDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReminderDatabase.m; path = caviar_dreams/ReminderDatabase.m; sourceTree = "<group>"; };
-		4602A4661B35E22700A396F0 /* ReminderDB.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ReminderDB.sqlite3; sourceTree = "<group>"; };
 		4602A4701B35E46100A396F0 /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
 		4602A4711B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_BoldItalic.ttf; sourceTree = "<group>"; };
 		4602A4721B35E46100A396F0 /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
 		4602A4731B35E46100A396F0 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
+		4690AB3C1B403ACE00C29C44 /* bossched.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = bossched.sqlite; sourceTree = "<group>"; };
 		46ECF3B91B36C15800D1E07A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		46ECF3BA1B36C15800D1E07A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		46F32AC11B2B90DA0097F3B8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
@@ -145,11 +145,11 @@
 		392CB23B1B270BDD00D55AA1 /* Reminder-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4690AB3C1B403ACE00C29C44 /* bossched.sqlite */,
 				46FF02E21B3F39480003DA1F /* Example2PieView.h */,
 				46FF02E31B3F39480003DA1F /* Example2PieView.m */,
 				46FF02E41B3F39480003DA1F /* MyPieElement.h */,
 				46FF02E51B3F39480003DA1F /* MyPieElement.m */,
-				4602A4661B35E22700A396F0 /* ReminderDB.sqlite3 */,
 				4602A4621B35DAFE00A396F0 /* ReminderDatabase.h */,
 				4602A4631B35DAFE00A396F0 /* ReminderDatabase.m */,
 				4602A4581B35D62200A396F0 /* Fonts */,
@@ -322,12 +322,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4602A4671B35E22700A396F0 /* ReminderDB.sqlite3 in Resources */,
 				392CB2481B270BDD00D55AA1 /* Main.storyboard in Resources */,
 				4602A4751B35E46100A396F0 /* CaviarDreams_BoldItalic.ttf in Resources */,
 				392CB24D1B270BDD00D55AA1 /* LaunchScreen.xib in Resources */,
 				4602A4741B35E46100A396F0 /* CaviarDreams_Bold.ttf in Resources */,
 				4602A45D1B35D62200A396F0 /* NoaLTStd-Light.otf in Resources */,
+				4690AB3D1B403ACE00C29C44 /* bossched.sqlite in Resources */,
 				4602A4771B35E46100A396F0 /* CaviarDreams.ttf in Resources */,
 				392CB24A1B270BDD00D55AA1 /* Images.xcassets in Resources */,
 				4602A45E1B35D62200A396F0 /* NoaLTStd-Regular.otf in Resources */,

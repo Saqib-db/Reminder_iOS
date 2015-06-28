@@ -50,7 +50,7 @@
 
 - (void)setup
 {
-    self.layer.maxRadius = 80;
+    self.layer.maxRadius = 110;
     self.layer.minRadius = 20;
     self.layer.animationDuration = 0.6;
     self.layer.startAngle = 90;
@@ -99,7 +99,7 @@
         NSInteger i = 0;
         for(PieElement* elem in self.layer.values){
             elem.centrOffset = (i==selectedIdx && _centerDisplace) ? 20 : 0;
-            elem.maxRadius = (i==selectedIdx && !_centerDisplace) ? @(100) : nil;
+            elem.maxRadius = (i==selectedIdx && !_centerDisplace) ? @(120) : nil;
             i++;
         }
     }];

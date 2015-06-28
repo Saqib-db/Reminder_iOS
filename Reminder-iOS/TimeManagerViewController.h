@@ -19,5 +19,6 @@
 @property (nonatomic, weak) IBOutlet Example2PieView* pieView;
 
 @property (nonatomic, weak) IBOutlet Example2PieView* pieView2;
+@property (weak, nonatomic) IBOutlet UIScrollView *pieContainer;
 
 @end

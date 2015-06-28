@@ -410,38 +410,109 @@
                                     <constraint firstAttribute="height" constant="50" id="rEx-Zm-zSe"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gt-cd-GTQ" customClass="Example2PieView">
-                                <rect key="frame" x="0.0" y="388" width="600" height="230"/>
-                                <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pG-cg-XIb" customClass="Example2PieView">
-                                <rect key="frame" x="0.0" y="131" width="600" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m90-sm-uPZ" customClass="UIScrollView">
+                                <rect key="frame" x="0.0" y="139" width="600" height="560"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gt-cd-GTQ" customClass="Example2PieView">
+                                        <rect key="frame" x="0.0" y="355" width="600" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfI-GY-VjA">
+                                                <rect key="frame" x="250" y="10" width="100" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reserved Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eV4-ZN-ZoM">
+                                                        <rect key="frame" x="27" y="2" width="80" height="21"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.050980396568775177" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="centerX" secondItem="eV4-ZN-ZoM" secondAttribute="centerX" id="Gtj-Qb-Dx9"/>
+                                                    <constraint firstItem="eV4-ZN-ZoM" firstAttribute="width" secondItem="cfI-GY-VjA" secondAttribute="width" id="Nfi-H9-ZJg"/>
+                                                    <constraint firstItem="eV4-ZN-ZoM" firstAttribute="height" secondItem="cfI-GY-VjA" secondAttribute="height" id="UHa-mD-ttt"/>
+                                                    <constraint firstAttribute="width" constant="100" id="Wlh-ce-xyI"/>
+                                                    <constraint firstAttribute="centerY" secondItem="eV4-ZN-ZoM" secondAttribute="centerY" id="Zfw-zq-31p"/>
+                                                    <constraint firstAttribute="height" constant="20" id="ewv-Ow-LGu"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="280" id="0be-Aw-GAu"/>
+                                            <constraint firstAttribute="trailing" secondItem="cfI-GY-VjA" secondAttribute="trailing" constant="2" id="2FE-yy-s8P"/>
+                                            <constraint firstItem="cfI-GY-VjA" firstAttribute="top" secondItem="2gt-cd-GTQ" secondAttribute="top" id="MeR-GE-rq8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pG-cg-XIb" customClass="Example2PieView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="280"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="csH-1y-Dpz">
+                                                <rect key="frame" x="498" y="260" width="100" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Free Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4e-GZ-vjS">
+                                                        <rect key="frame" x="27" y="2" width="80" height="21"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.19215686269999999" green="0.85882352939999995" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="centerY" secondItem="i4e-GZ-vjS" secondAttribute="centerY" id="5yM-eF-cUV"/>
+                                                    <constraint firstAttribute="height" constant="20" id="cTc-6o-jge"/>
+                                                    <constraint firstItem="i4e-GZ-vjS" firstAttribute="height" secondItem="csH-1y-Dpz" secondAttribute="height" id="g4G-Us-ryD"/>
+                                                    <constraint firstAttribute="centerX" secondItem="i4e-GZ-vjS" secondAttribute="centerX" id="nDM-sz-97c"/>
+                                                    <constraint firstAttribute="width" constant="100" id="udh-by-yHY"/>
+                                                    <constraint firstItem="i4e-GZ-vjS" firstAttribute="width" secondItem="csH-1y-Dpz" secondAttribute="width" id="xAa-DU-cfA"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="csH-1y-Dpz" secondAttribute="bottom" id="H2A-ux-tVu"/>
+                                            <constraint firstAttribute="height" constant="280" id="iJb-wf-k4t"/>
+                                            <constraint firstAttribute="trailing" secondItem="csH-1y-Dpz" secondAttribute="trailing" constant="2" id="jaZ-XS-zAa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="k9S-NE-MYN"/>
+                                    <constraint firstItem="6pG-cg-XIb" firstAttribute="top" secondItem="m90-sm-uPZ" secondAttribute="top" id="0Hk-1K-16j"/>
+                                    <constraint firstAttribute="centerX" secondItem="2gt-cd-GTQ" secondAttribute="centerX" id="1wt-BV-zY1"/>
+                                    <constraint firstItem="6pG-cg-XIb" firstAttribute="width" secondItem="m90-sm-uPZ" secondAttribute="width" id="Plv-xS-y2s"/>
+                                    <constraint firstAttribute="height" constant="560" id="czL-UW-sul"/>
+                                    <constraint firstAttribute="centerX" secondItem="6pG-cg-XIb" secondAttribute="centerX" id="gOJ-fL-JBS"/>
+                                    <constraint firstAttribute="width" secondItem="2gt-cd-GTQ" secondAttribute="width" id="nlu-S3-nFq"/>
+                                    <constraint firstItem="2gt-cd-GTQ" firstAttribute="top" secondItem="6pG-cg-XIb" secondAttribute="bottom" id="qDe-kK-RW9"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="keyPath">
+                                        <size key="value" width="320" height="560"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6pG-cg-XIb" firstAttribute="top" secondItem="IDS-hy-lQj" secondAttribute="bottom" id="4A0-ve-lHf"/>
                             <constraint firstItem="IDS-hy-lQj" firstAttribute="top" secondItem="gkv-yC-71D" secondAttribute="bottom" id="5uf-gg-8i9"/>
+                            <constraint firstItem="m90-sm-uPZ" firstAttribute="top" secondItem="IDS-hy-lQj" secondAttribute="bottom" constant="8" id="811-KZ-y7U"/>
                             <constraint firstAttribute="width" secondItem="gkv-yC-71D" secondAttribute="width" id="Jsp-1M-iBC"/>
-                            <constraint firstItem="2gt-cd-GTQ" firstAttribute="width" secondItem="mBl-eX-wm6" secondAttribute="width" id="TGY-E3-Ctq"/>
-                            <constraint firstItem="TUY-X4-k2V" firstAttribute="top" secondItem="2gt-cd-GTQ" secondAttribute="bottom" id="Ymg-fC-MfR"/>
-                            <constraint firstAttribute="centerX" secondItem="6pG-cg-XIb" secondAttribute="centerX" id="c14-dO-Lky"/>
                             <constraint firstAttribute="width" secondItem="IDS-hy-lQj" secondAttribute="width" id="d7Y-QW-xWU"/>
-                            <constraint firstAttribute="width" secondItem="6pG-cg-XIb" secondAttribute="width" id="e9l-a2-Oiw"/>
+                            <constraint firstAttribute="width" secondItem="m90-sm-uPZ" secondAttribute="width" id="dMf-Mn-dAO"/>
                             <constraint firstAttribute="centerX" secondItem="gkv-yC-71D" secondAttribute="centerX" id="hlt-FS-bc2"/>
-                            <constraint firstAttribute="centerX" secondItem="2gt-cd-GTQ" secondAttribute="centerX" id="iug-D0-6dV"/>
+                            <constraint firstAttribute="centerX" secondItem="m90-sm-uPZ" secondAttribute="centerX" id="m4P-bM-nti"/>
                             <constraint firstItem="gkv-yC-71D" firstAttribute="top" secondItem="j3o-8i-GQi" secondAttribute="bottom" id="nWS-sD-AnS"/>
                             <constraint firstAttribute="centerX" secondItem="IDS-hy-lQj" secondAttribute="centerX" id="s3H-SA-WB9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lqE-tN-OBb"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="calendarContentView" destination="IDS-hy-lQj" id="Ul8-oZ-2mj"/>
                         <outlet property="calendarMenuView" destination="gkv-yC-71D" id="XRt-TL-JQF"/>
+                        <outlet property="pieContainer" destination="m90-sm-uPZ" id="vtO-iA-mqW"/>
                         <outlet property="pieView" destination="6pG-cg-XIb" id="Rph-ZR-WzY"/>
                         <outlet property="pieView2" destination="2gt-cd-GTQ" id="ecm-pT-GNS"/>
                     </connections>

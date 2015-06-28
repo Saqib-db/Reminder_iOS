@@ -169,20 +169,40 @@ static NSString * const FooterIdentifier = @"FooterIdentifier";
     }
     _popMenu.didSelectedItemCompletion = ^(MenuItem *selectedItem) {
         NSLog(@"%li",(long)selectedItem.index);
-        if (selectedItem.index == 4) {
-            [self performSegueWithIdentifier:@"HomeToCalendar" sender:self];
-        }
-        else if (selectedItem.index == 0){
+        if (selectedItem.index == 0) {
             [self performSegueWithIdentifier:@"HomeToNew" sender:self];
         }
         else if (selectedItem.index == 1){
             [self performSegueWithIdentifier:@"HomeToTimeManager" sender:self];
+        }
+        else if (selectedItem.index == 2){
+            [self showUnderDevelopement];
+        }
+        else if (selectedItem.index == 3){
+            [self showUnderDevelopement];
+        }
+        else if (selectedItem.index == 4){
+            [self performSegueWithIdentifier:@"HomeToCalendar" sender:self];
+        }
+        else if (selectedItem.index == 5){
+            [self showUnderDevelopement];
+        }
+        else{
+            NSLog(@"Unhandled Click at menu");
         }
     };
 
     [_popMenu showMenuAtView:self.view];
     
     //    [_popMenu showMenuAtView:self.view startPoint:CGPointMake(CGRectGetWidth(self.view.bounds) - 60, CGRectGetHeight(self.view.bounds)) endPoint:CGPointMake(60, CGRectGetHeight(self.view.bounds))];
+}
+-(void)showUnderDevelopement{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Under Developement"
+                                                    message:@"The page or service is still under developement."
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil,nil];
+    [alert show];
 }
 
 
