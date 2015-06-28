@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "392CB2381B270BDD00D55AA1"
-               BuildableName = "Reminder-iOS.app"
-               BlueprintName = "Reminder-iOS"
-               ReferencedContainer = "container:Reminder-iOS.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "392CB2511B270BDD00D55AA1"
-               BuildableName = "Reminder-iOSTests.xctest"
-               BlueprintName = "Reminder-iOSTests"
-               ReferencedContainer = "container:Reminder-iOS.xcodeproj">
+               BuildableName = "Bossched.app"
+               BlueprintName = "Bossched"
+               ReferencedContainer = "container:Bossched.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "392CB2511B270BDD00D55AA1"
-               BuildableName = "Reminder-iOSTests.xctest"
-               BlueprintName = "Reminder-iOSTests"
-               ReferencedContainer = "container:Reminder-iOS.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "392CB2381B270BDD00D55AA1"
-            BuildableName = "Reminder-iOS.app"
-            BlueprintName = "Reminder-iOS"
-            ReferencedContainer = "container:Reminder-iOS.xcodeproj">
+            BuildableName = "Bossched.app"
+            BlueprintName = "Bossched"
+            ReferencedContainer = "container:Bossched.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "392CB2381B270BDD00D55AA1"
-            BuildableName = "Reminder-iOS.app"
-            BlueprintName = "Reminder-iOS"
-            ReferencedContainer = "container:Reminder-iOS.xcodeproj">
+            BuildableName = "Bossched.app"
+            BlueprintName = "Bossched"
+            ReferencedContainer = "container:Bossched.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "392CB2381B270BDD00D55AA1"
-            BuildableName = "Reminder-iOS.app"
-            BlueprintName = "Reminder-iOS"
-            ReferencedContainer = "container:Reminder-iOS.xcodeproj">
+            BuildableName = "Bossched.app"
+            BlueprintName = "Bossched"
+            ReferencedContainer = "container:Bossched.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     // Do any additional setup after loading the view..
     for(int year = 1; year <= 12; year++){
         MyPieElement* elem = [MyPieElement pieElementWithValue:(5+arc4random()%8) color:[self randomColor]];
@@ -33,9 +34,7 @@
         MyPieElement* elem = [MyPieElement pieElementWithValue:(5+arc4random()%8) color:[self randomColor]];
         elem.title = [NSString stringWithFormat:@"%d pm", year];
         [pieView2.layer addValues:@[elem] animated:NO];
-        
     }
-    
     //mutch easier do this with array outside
     showPercent = NO;
     pieView.layer.transformTitleBlock = ^(PieElement* elem, float percent){

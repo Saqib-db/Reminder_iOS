@@ -50,7 +50,7 @@
 
 /* Begin PBXFileReference section */
 		05826CBE2B0F02849A824443 /* Pods-Reminder-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminder-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reminder-iOS/Pods-Reminder-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		392CB2391B270BDD00D55AA1 /* Reminder-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reminder-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		392CB2391B270BDD00D55AA1 /* Bossched.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bossched.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		392CB23D1B270BDD00D55AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		392CB23E1B270BDD00D55AA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		392CB2401B270BDD00D55AA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		392CB2471B270BDD00D55AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		392CB2491B270BDD00D55AA1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		392CB24C1B270BDD00D55AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		392CB2521B270BDD00D55AA1 /* Reminder-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reminder-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		392CB2521B270BDD00D55AA1 /* BosschedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BosschedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		392CB2571B270BDD00D55AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		392CB2581B270BDD00D55AA1 /* Reminder_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reminder_iOSTests.m; sourceTree = "<group>"; };
 		392CB2621B2713A000D55AA1 /* RAMCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAMCollectionViewCell.h; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 		392CB23A1B270BDD00D55AA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				392CB2391B270BDD00D55AA1 /* Reminder-iOS.app */,
-				392CB2521B270BDD00D55AA1 /* Reminder-iOSTests.xctest */,
+				392CB2391B270BDD00D55AA1 /* Bossched.app */,
+				392CB2521B270BDD00D55AA1 /* BosschedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,9 +241,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		392CB2381B270BDD00D55AA1 /* Reminder-iOS */ = {
+		392CB2381B270BDD00D55AA1 /* Bossched */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 392CB25C1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "Reminder-iOS" */;
+			buildConfigurationList = 392CB25C1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "Bossched" */;
 			buildPhases = (
 				E06BF12DDB867A19FAE35B02 /* Check Pods Manifest.lock */,
 				392CB2351B270BDD00D55AA1 /* Sources */,
@@ -256,14 +256,14 @@
 			);
 			dependencies = (
 			);
-			name = "Reminder-iOS";
+			name = Bossched;
 			productName = "Reminder-iOS";
-			productReference = 392CB2391B270BDD00D55AA1 /* Reminder-iOS.app */;
+			productReference = 392CB2391B270BDD00D55AA1 /* Bossched.app */;
 			productType = "com.apple.product-type.application";
 		};
-		392CB2511B270BDD00D55AA1 /* Reminder-iOSTests */ = {
+		392CB2511B270BDD00D55AA1 /* BosschedTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 392CB25F1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "Reminder-iOSTests" */;
+			buildConfigurationList = 392CB25F1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "BosschedTests" */;
 			buildPhases = (
 				392CB24E1B270BDD00D55AA1 /* Sources */,
 				392CB24F1B270BDD00D55AA1 /* Frameworks */,
@@ -274,9 +274,9 @@
 			dependencies = (
 				392CB2541B270BDD00D55AA1 /* PBXTargetDependency */,
 			);
-			name = "Reminder-iOSTests";
+			name = BosschedTests;
 			productName = "Reminder-iOSTests";
-			productReference = 392CB2521B270BDD00D55AA1 /* Reminder-iOSTests.xctest */;
+			productReference = 392CB2521B270BDD00D55AA1 /* BosschedTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -298,7 +298,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 392CB2341B270BDD00D55AA1 /* Build configuration list for PBXProject "Reminder-iOS" */;
+			buildConfigurationList = 392CB2341B270BDD00D55AA1 /* Build configuration list for PBXProject "Bossched" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -311,8 +311,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				392CB2381B270BDD00D55AA1 /* Reminder-iOS */,
-				392CB2511B270BDD00D55AA1 /* Reminder-iOSTests */,
+				392CB2381B270BDD00D55AA1 /* Bossched */,
+				392CB2511B270BDD00D55AA1 /* BosschedTests */,
 			);
 		};
 /* End PBXProject section */
@@ -426,7 +426,7 @@
 /* Begin PBXTargetDependency section */
 		392CB2541B270BDD00D55AA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 392CB2381B270BDD00D55AA1 /* Reminder-iOS */;
+			target = 392CB2381B270BDD00D55AA1 /* Bossched */;
 			targetProxy = 392CB2531B270BDD00D55AA1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -547,7 +547,7 @@
 				INFOPLIST_FILE = "Reminder-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Bossched;
 				PROVISIONING_PROFILE = "e18816ed-abf2-4619-9569-95516da5b3c4";
 			};
 			name = Debug;
@@ -565,7 +565,7 @@
 				INFOPLIST_FILE = "Reminder-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Bossched;
 				PROVISIONING_PROFILE = "e18816ed-abf2-4619-9569-95516da5b3c4";
 			};
 			name = Release;
@@ -584,7 +584,7 @@
 				);
 				INFOPLIST_FILE = "Reminder-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BosschedTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reminder-iOS.app/Reminder-iOS";
 			};
 			name = Debug;
@@ -599,7 +599,7 @@
 				);
 				INFOPLIST_FILE = "Reminder-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BosschedTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reminder-iOS.app/Reminder-iOS";
 			};
 			name = Release;
@@ -607,7 +607,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		392CB2341B270BDD00D55AA1 /* Build configuration list for PBXProject "Reminder-iOS" */ = {
+		392CB2341B270BDD00D55AA1 /* Build configuration list for PBXProject "Bossched" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				392CB25A1B270BDD00D55AA1 /* Debug */,
@@ -616,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		392CB25C1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "Reminder-iOS" */ = {
+		392CB25C1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "Bossched" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				392CB25D1B270BDD00D55AA1 /* Debug */,
@@ -625,7 +625,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		392CB25F1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "Reminder-iOSTests" */ = {
+		392CB25F1B270BDD00D55AA1 /* Build configuration list for PBXNativeTarget "BosschedTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				392CB2601B270BDD00D55AA1 /* Debug */,
